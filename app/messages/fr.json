@@ -1,0 +1,130 @@
+{
+  "nav": { "diagnose": "Diagnostic", "solution": "Solution", "guarantee": "Garantie", "contact": "Contact" },
+  "hero": {
+    "badge": "Plus que 33 places en 2026",
+    "headline1": "Combien d'argent votre restaurant",
+    "headline2": "perd-il",
+    "headline3": "chaque jour?",
+    "sub": "En 60 minutes, je vous montre exactement où l'argent disparaît — et comment le récupérer.",
+    "cta_primary": "DIAGNOSTIC GRATUIT — 60 MIN",
+    "cta_secondary": "Voir tous les plans",
+    "trust": "30 ans en gastronomie · 41 ans en Allemagne · Pas une agence — je suis l'expert"
+  },
+  "pain": {
+    "title": "Vous vous reconnaissez?",
+    "items": [
+      "Le chiffre d'affaires stagne depuis des mois ou des années",
+      "Vous travaillez 70h+ par semaine et les résultats ne changent pas",
+      "Pas de présence digitale — la concurrence vous vole vos clients",
+      "Les coûts augmentent, les bénéfices baissent — vous ne savez pas pourquoi",
+      "Pas de temps pour innover, faire du marketing ou croître"
+    ],
+    "conclusion": "Le problème n'est pas le marché. C'est l'absence de système."
+  },
+  "quiz": {
+    "title": "Diagnostic Rapide",
+    "subtitle": "7 questions · 3 minutes · Résultat immédiat",
+    "questions": [
+      { "q": "Pouvez-vous expliquer en une phrase ce qui rend votre établissement unique?", "a": ["Oui, clairement", "Plus ou moins", "Non"] },
+      { "q": "Votre établissement génère-t-il de vrais bénéfices chaque mois?", "a": ["Oui", "Parfois", "Non"] },
+      { "q": "Pourriez-vous vous absenter une semaine sans que tout s'arrête?", "a": ["Oui", "Difficilement", "Non"] },
+      { "q": "Avez-vous un système de marketing digital actif?", "a": ["Oui", "Partiellement", "Non"] },
+      { "q": "Organisez-vous des événements ou des actions régulièrement?", "a": ["Souvent", "Rarement", "Jamais"] },
+      { "q": "Votre marque est-elle enregistrée légalement?", "a": ["Oui", "En cours", "Non"] },
+      { "q": "Avez-vous un plan de croissance clair pour les 12 prochains mois?", "a": ["Oui", "Partiellement", "Non"] }
+    ],
+    "result_high": "Bien positionné — mais des opportunités de croissance importantes existent",
+    "result_mid": "Votre établissement stagne — un système peut changer cela",
+    "result_low": "ALERTE: Votre établissement perd de l'argent chaque jour — action urgente requise",
+    "loss_text": "Perte mensuelle estimée",
+    "cta": "RÉSERVER UNE CONSULTATION GRATUITE"
+  },
+  "solution": {
+    "badge": "Le Système",
+    "title": "#MYGASTROIA#",
+    "subtitle": "VOTRE PROPRE IA — DANS VOTRE ÉTABLISSEMENT",
+    "tagline": "TRANSFORMATION DIGITALE EN 365 JOURS",
+    "mission": "D'abord je vous aide à économiser. Ensuite à gagner plus. Vous me payez avec l'argent que je vous aide à récupérer. WIN-WIN — tout le monde gagne.",
+    "steps": [
+      { "n": "01", "title": "STOPPER LES FUITES", "desc": "Nous analysons où l'argent disparaît chaque jour et nous l'arrêtons immédiatement." },
+      { "n": "02", "title": "RÉCUPÉRER CET ARGENT", "desc": "Réduire les dépenses inutiles. Optimiser les ressources." },
+      { "n": "03", "title": "SÉCURISER LES ÉCONOMIES", "desc": "Système de contrôle financier actif toute l'année." },
+      { "n": "04", "title": "GAGNER PLUS", "desc": "Nouveaux concepts, événements, outils IA, nouvelles sources de revenus." },
+      { "n": "05", "title": "CROISSANCE 365 JOURS", "desc": "Accompagnement continu. Mise à jour. Optimisation permanente." }
+    ]
+  },
+  "plans": {
+    "title": "Les 8 Niveaux",
+    "subtitle": "Du gratuit à l'exclusif — le bon point d'entrée pour chaque établissement",
+    "per_month": "/mois",
+    "contract": "Contrat minimum 12 mois",
+    "includes": "Inclus dans TOUS les plans",
+    "included_items": ["Banque Publicitaire 365 jours", "Maintenance & Mises à jour", "Support technique en temps réel", "Garantie de croissance 9 mois"],
+    "popular": "Plus populaire",
+    "exclusive": "Exclusif Bâle",
+    "list": [
+      { "n": "0", "name": "DIAGNOSTIC GRATUIT", "price": "0 €", "desc": "60 min · Sans engagement · Résultat immédiat", "type": "free" },
+      { "n": "1", "name": "CONSULTATION PRIVÉE", "price": "999 €", "desc": "30–40 min · Analyse complète · Plan d'action + Cadeaux valeur 2.000 €", "type": "once" },
+      { "n": "2", "name": "STARTER", "price": "1.299 €", "desc": "Diagnostic IA · Banque pub · SEO local · Réseaux sociaux · Support", "type": "monthly" },
+      { "n": "3", "name": "GROWTH", "price": "1.999 €", "desc": "Marketing IA quotidien · 50+ Événements · Académie · E-mail marketing · SEO Pro", "type": "monthly" },
+      { "n": "4", "name": "PREMIUM", "price": "2.999 €", "desc": "Tout Growth + Coaching · Marque · App · WhatsApp Bot 24/7 · Écosystème digital complet", "type": "monthly", "popular": true },
+      { "n": "5", "name": "ELITE", "price": "7.777 €", "desc": "Mon salaire mensuel · Travail dédié à plein temps · Franchise · Marque déposée", "type": "monthly" },
+      { "n": "6", "name": "DIRECTEUR HYBRIDE", "price": "CHF 11.000", "desc": "18 mois · 8 domaines d'expertise · Économie CHF 276.000/an · Logement inclus", "type": "monthly", "exclusive": true },
+      { "n": "7", "name": "GASTRO-IMMO", "price": "Sur demande", "desc": "Système complet · Transformation + Expansion + Vente · 1 place disponible", "type": "special" }
+    ]
+  },
+  "compare": {
+    "title": "1 Personne vs. 5 Spécialistes",
+    "subtitle": "La décision mathématique",
+    "col_a": "5 spécialistes (Bâle)",
+    "col_b": "#MYGASTROIA#",
+    "rows": [
+      ["Consultant Chef / Directeur", "CHF 6.500", "✓"],
+      ["Administrateur / Controller", "CHF 5.500", "✓"],
+      ["IT / Systèmes", "CHF 8.000", "✓"],
+      ["Marketing Digital", "CHF 5.000", "✓"],
+      ["Développeur logiciel", "CHF 9.000", "✓"]
+    ],
+    "total_a": "CHF 34.000 / mois",
+    "total_b": "CHF 11.000 / mois",
+    "saving": "Vous économisez CHF 276.000 par an"
+  },
+  "guarantee": {
+    "title": "La Garantie",
+    "subtitle": "Que personne d'autre à Bâle ne donne",
+    "items": [
+      "Certificat de Garantie de Croissance en moins de 9 mois",
+      "3 mois d'implémentation + 6 mois de croissance réelle",
+      "Si je n'atteins pas l'objectif — je travaille GRATUITEMENT jusqu'à la fin du contrat",
+      "Si le contrat se termine sans croissance — je continue GRATUITEMENT",
+      "Aucune agence en Europe ne donne cette garantie. Moi oui."
+    ],
+    "badge": "CERTIFICAT DE GARANTIE DE CROISSANCE"
+  },
+  "cases": {
+    "title": "Vous reconnaissez votre établissement?",
+    "list": [
+      { "type": "Restaurant Traditionnel", "problem": "Stagnation 3 ans · Pas de présence digitale", "result": "Mois 6: +40% CA · –25% coûts · Nouvelle clientèle 25–45 ans" },
+      { "type": "Bar / Café", "problem": "Forte concurrence · Clients qui ne reviennent pas", "result": "Mois 6: +50% clients fidèles · Événements à 100% d'occupation" },
+      { "type": "Hôtel-Restaurant", "problem": "Seulement 20% des clients utilisent le restaurant", "result": "Mois 6: Rentable · 60% clients hôtel · 40% clients externes" },
+      { "type": "Entreprise Familiale", "problem": "Propriétaires 80h/semaine · Pas de systèmes", "result": "Mois 6: 25h/semaine récupérées · +35% CA" }
+    ]
+  },
+  "contact": {
+    "title": "Commencer maintenant",
+    "subtitle": "Diagnostic gratuit de 60 minutes — sans engagement",
+    "name": "Votre nom",
+    "business": "Nom de l'établissement",
+    "city": "Ville (Bâle / environs)",
+    "phone": "WhatsApp",
+    "plan": "Quel plan vous intéresse?",
+    "message": "Votre plus grand problème aujourd'hui",
+    "submit": "DEMANDER UN DIAGNOSTIC",
+    "or": "Ou me contacter directement",
+    "whatsapp": "Écrire sur WhatsApp",
+    "slots": "Il reste {n} places en 2026",
+    "success": "Merci! Je vous contacte dans les 24 heures.",
+    "plans_select": ["Diagnostic Gratuit", "Consultation Privée 999€", "Starter 1.299€/mois", "Growth 1.999€/mois", "Premium 2.999€/mois", "Elite 7.777€/mois", "Directeur Hybride CHF 11.000", "GASTRO-IMMO"]
+  },
+  "footer": { "tagline": "Transformation Digitale en 365 Jours", "rights": "Tous droits réservés" }
+}
