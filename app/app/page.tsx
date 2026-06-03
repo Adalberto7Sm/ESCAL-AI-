@@ -411,6 +411,8 @@ export default function Home() {
               { icon: "⚡", title: lang === "de" ? "Technischer Support in Echtzeit" : lang === "fr" ? "Support technique en temps réel" : lang === "it" ? "Supporto tecnico in tempo reale" : lang === "es" ? "Soporte técnico en tiempo real" : "Real-time Technical Support" },
               { icon: "🏪", title: lang === "de" ? "Franchise & Expansion" : lang === "fr" ? "Franchise & Expansion" : lang === "it" ? "Franchising & Espansione" : lang === "es" ? "Franquicia & Expansión" : "Franchise & Expansion" },
               { icon: "🏠", title: lang === "de" ? "GASTRO-IMMO: Transformation + Verkauf" : lang === "fr" ? "GASTRO-IMMO: Transformation + Vente" : lang === "it" ? "GASTRO-IMMO: Trasformazione + Vendita" : lang === "es" ? "GASTRO-IMMO: Transformación + Venta" : "GASTRO-IMMO: Transformation + Sale" },
+              { icon: "🌐", title: lang === "de" ? "Globales Web-Imperium" : lang === "fr" ? "Empire Web Global" : lang === "it" ? "Impero Web Globale" : lang === "es" ? "Imperio Web Global" : "Global Web Empire" },
+              { icon: "🎨", title: lang === "de" ? "Professionelles Grafikdesign" : lang === "fr" ? "Design Graphique Avancé" : lang === "it" ? "Design Grafico Avanzato" : lang === "es" ? "Diseño Gráfico Avanzado" : "Advanced Graphic Design" },
             ].map((s, i) => (
               <div key={i} className="flex items-center gap-4 p-4 rounded-xl card-premium transition-all hover:border-[#D4AF37]">
                 <span className="text-2xl shrink-0">{s.icon}</span>
@@ -446,6 +448,46 @@ export default function Home() {
               <span>📱</span> WhatsApp
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* LEARNING SECTION */}
+      <section className="py-20 px-4" style={{ background: "#111" }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="inline-block px-4 py-1 text-sm font-bold text-[#D4AF37] border border-[#D4AF37]/40 rounded-full mb-6">
+            {lang === "de" ? "Bildung & Wachstum" : lang === "fr" ? "Formation & Croissance" : lang === "it" ? "Formazione & Crescita" : lang === "es" ? "Formación & Crecimiento" : "Education & Growth"}
+          </span>
+          <h2 className="text-3xl md:text-4xl font-black gold-text mb-4">
+            {lang === "de" ? "Persönliches Lernen für Inhaber & Team" : lang === "fr" ? "Apprentissage Personnalisé pour Propriétaires & Équipe" : lang === "it" ? "Apprendimento Personalizzato per Titolari & Team" : lang === "es" ? "Aprendizaje Personalizado para Dueños y Equipo de Trabajo" : "Personalised Learning for Owners & Team"}
+          </h2>
+          <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
+            {lang === "de" ? "Praxiswissen direkt von mir — für Sie und Ihr Team. Gastronomie, digitale Tools, Führung und Wachstum." : lang === "fr" ? "Connaissances pratiques directement de moi — pour vous et votre équipe. Gastronomie, outils digitaux, leadership et croissance." : lang === "it" ? "Conoscenze pratiche direttamente da me — per te e il tuo team. Gastronomia, strumenti digitali, leadership e crescita." : lang === "es" ? "Conocimiento práctico directo de mí — para ti y tu equipo de trabajo. Gastronomía, herramientas digitales, liderazgo y crecimiento." : "Practical knowledge directly from me — for you and your team. Gastronomy, digital tools, leadership and growth."}
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-10">
+            {[
+              { icon: "👨‍🍳", text: lang === "de" ? "Gastronomie & Management" : lang === "fr" ? "Gastronomie & Management" : lang === "it" ? "Gastronomia & Management" : lang === "es" ? "Gastronomía & Gestión" : "Gastronomy & Management" },
+              { icon: "📲", text: lang === "de" ? "Digitale Tools & KI" : lang === "fr" ? "Outils Digitaux & IA" : lang === "it" ? "Strumenti Digitali & IA" : lang === "es" ? "Herramientas Digitales & IA" : "Digital Tools & AI" },
+              { icon: "💡", text: lang === "de" ? "Leadership & Wachstum" : lang === "fr" ? "Leadership & Croissance" : lang === "it" ? "Leadership & Crescita" : lang === "es" ? "Liderazgo & Crecimiento" : "Leadership & Growth" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 p-5 rounded-xl card-premium">
+                <span className="text-3xl">{item.icon}</span>
+                <span className="text-gray-200 font-medium">{item.text}</span>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href="https://aprendeconmigo.abacusai.app/ventas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 gold-gradient text-black font-black text-xl px-12 py-5 rounded-xl hover:opacity-90 transition-opacity pulse-gold"
+          >
+            🎓 {lang === "de" ? "Jetzt mit mir lernen" : lang === "fr" ? "Apprends avec moi aujourd'hui" : lang === "it" ? "Impara con me oggi" : lang === "es" ? "Aprende Conmigo Hoy" : "Learn With Me Today"}
+          </a>
+          <p className="text-gray-500 text-xs mt-4">
+            {lang === "es" || lang === "de" || lang === "fr" || lang === "it" ? "🇪🇸 Disponible en Español" : "🇪🇸 Available in Spanish"}
+          </p>
         </div>
       </section>
 
