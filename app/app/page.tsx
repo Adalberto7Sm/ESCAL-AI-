@@ -381,6 +381,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SERVICES */}
+      <section className="py-20 px-4" style={{ background: "#0D0D0D" }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black gold-text mb-3">
+              {lang === "de" ? "Alle Leistungen" : lang === "fr" ? "Tous les services" : lang === "it" ? "Tutti i servizi" : lang === "es" ? "Todos los servicios" : "All Services"}
+            </h2>
+            <p className="text-gray-400">
+              {lang === "de" ? "Was Sie erhalten — in jedem Plan" : lang === "fr" ? "Ce que vous obtenez — dans chaque plan" : lang === "it" ? "Cosa ottieni — in ogni piano" : lang === "es" ? "Lo que obtienes — en cada plan" : "What you get — in every plan"}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+            {[
+              { icon: "🤖", title: lang === "de" ? "KI-Diagnose & Strategie" : lang === "fr" ? "Diagnostic IA & Stratégie" : lang === "it" ? "Diagnosi IA & Strategia" : lang === "es" ? "Diagnóstico IA & Estrategia" : "AI Diagnosis & Strategy" },
+              { icon: "📢", title: lang === "de" ? "Werbebank 365 Tage" : lang === "fr" ? "Banque Publicitaire 365 jours" : lang === "it" ? "Banca Pubblicitaria 365 giorni" : lang === "es" ? "Banco Publicitario 365 días" : "Advertising Bank 365 Days" },
+              { icon: "📱", title: lang === "de" ? "Social Media Management" : lang === "fr" ? "Gestion Réseaux Sociaux" : lang === "it" ? "Gestione Social Media" : lang === "es" ? "Gestión Redes Sociales" : "Social Media Management" },
+              { icon: "🔍", title: lang === "de" ? "Lokales SEO & Google" : lang === "fr" ? "SEO Local & Google" : lang === "it" ? "SEO Locale & Google" : lang === "es" ? "SEO Local & Google" : "Local SEO & Google" },
+              { icon: "📧", title: lang === "de" ? "E-Mail-Marketing" : lang === "fr" ? "E-mail Marketing" : lang === "it" ? "Email Marketing" : lang === "es" ? "Email Marketing" : "Email Marketing" },
+              { icon: "🎪", title: lang === "de" ? "Events & Aktionen (50+)" : lang === "fr" ? "Événements & Actions (50+)" : lang === "it" ? "Eventi & Azioni (50+)" : lang === "es" ? "Eventos & Acciones (50+)" : "Events & Promotions (50+)" },
+              { icon: "💬", title: lang === "de" ? "WhatsApp Bot 24/7" : lang === "fr" ? "WhatsApp Bot 24/7" : lang === "it" ? "WhatsApp Bot 24/7" : lang === "es" ? "WhatsApp Bot 24/7" : "WhatsApp Bot 24/7" },
+              { icon: "📱", title: lang === "de" ? "Exklusive Restaurant-App" : lang === "fr" ? "App Exclusive Restaurant" : lang === "it" ? "App Esclusiva Ristorante" : lang === "es" ? "App Exclusiva Restaurante" : "Exclusive Restaurant App" },
+              { icon: "🏷️", title: lang === "de" ? "Markenregistrierung" : lang === "fr" ? "Enregistrement de Marque" : lang === "it" ? "Registrazione Marchio" : lang === "es" ? "Registro de Marca" : "Brand Registration" },
+              { icon: "🎓", title: lang === "de" ? "Gastro-Akademie" : lang === "fr" ? "Académie Gastro" : lang === "it" ? "Accademia Gastro" : lang === "es" ? "Academia Gastro" : "Gastro Academy" },
+              { icon: "📊", title: lang === "de" ? "Finanzkontrolle & Kostensenkung" : lang === "fr" ? "Contrôle financier & Réduction coûts" : lang === "it" ? "Controllo finanziario & Riduzione costi" : lang === "es" ? "Control financiero & Reducción costos" : "Financial Control & Cost Reduction" },
+              { icon: "🤝", title: lang === "de" ? "Persönliches Coaching" : lang === "fr" ? "Coaching Personnel" : lang === "it" ? "Coaching Personale" : lang === "es" ? "Coaching Personal" : "Personal Coaching" },
+              { icon: "🔧", title: lang === "de" ? "Wartung & Updates (ganzes Jahr)" : lang === "fr" ? "Maintenance & Mises à jour (toute l'année)" : lang === "it" ? "Manutenzione & Aggiornamenti (tutto l'anno)" : lang === "es" ? "Mantenimiento & Actualizaciones (todo el año)" : "Maintenance & Updates (all year)" },
+              { icon: "⚡", title: lang === "de" ? "Technischer Support in Echtzeit" : lang === "fr" ? "Support technique en temps réel" : lang === "it" ? "Supporto tecnico in tempo reale" : lang === "es" ? "Soporte técnico en tiempo real" : "Real-time Technical Support" },
+              { icon: "🏪", title: lang === "de" ? "Franchise & Expansion" : lang === "fr" ? "Franchise & Expansion" : lang === "it" ? "Franchising & Espansione" : lang === "es" ? "Franquicia & Expansión" : "Franchise & Expansion" },
+              { icon: "🏠", title: lang === "de" ? "GASTRO-IMMO: Transformation + Verkauf" : lang === "fr" ? "GASTRO-IMMO: Transformation + Vente" : lang === "it" ? "GASTRO-IMMO: Trasformazione + Vendita" : lang === "es" ? "GASTRO-IMMO: Transformación + Venta" : "GASTRO-IMMO: Transformation + Sale" },
+            ].map((s, i) => (
+              <div key={i} className="flex items-center gap-4 p-4 rounded-xl card-premium transition-all hover:border-[#D4AF37]">
+                <span className="text-2xl shrink-0">{s.icon}</span>
+                <span className="text-sm font-medium text-gray-200">{s.title}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Mission statement */}
+          <div className="rounded-2xl p-8 text-center" style={{ background: "#1A0F00", border: "2px solid #D4AF37" }}>
+            <div className="gold-text font-black text-xl mb-6 tracking-widest">
+              {lang === "de" ? "DIGITALE TRANSFORMATION IN 365 TAGEN" : lang === "fr" ? "TRANSFORMATION DIGITALE EN 365 JOURS" : lang === "it" ? "TRASFORMAZIONE DIGITALE IN 365 GIORNI" : lang === "es" ? "TRANSFORMACIÓN DIGITAL EN 365 DÍAS" : "DIGITAL TRANSFORMATION IN 365 DAYS"}
+            </div>
+            <div className="grid md:grid-cols-2 gap-4 mb-6 text-left">
+              {[
+                { icon: "💰", text: lang === "de" ? "Erst helfe ich Ihnen zu SPAREN" : lang === "fr" ? "D'abord je vous aide à ÉCONOMISER" : lang === "it" ? "Prima ti aiuto a RISPARMIARE" : lang === "es" ? "Primero te ayudo a AHORRAR" : "First I help you SAVE" },
+                { icon: "📈", text: lang === "de" ? "Dann helfe ich Ihnen mehr zu VERDIENEN" : lang === "fr" ? "Ensuite je vous aide à GAGNER PLUS" : lang === "it" ? "Poi ti aiuto a GUADAGNARE DI PIÙ" : lang === "es" ? "Luego te ayudo a GANAR MÁS" : "Then I help you EARN MORE" },
+                { icon: "🤝", text: lang === "de" ? "Sie zahlen aus dem Geld, das ich Ihnen spare — WIN-WIN" : lang === "fr" ? "Vous payez avec l'argent que je vous aide à récupérer — WIN-WIN" : lang === "it" ? "Mi paghi con i soldi che ti aiuto a recuperare — WIN-WIN" : lang === "es" ? "Me pagas del dinero que te ayudo a recuperar — WIN-WIN" : "You pay from the money I help you save — WIN-WIN" },
+                { icon: "🛡️", text: lang === "de" ? "Wachstumsgarantie-Zertifikat in weniger als 9 Monaten" : lang === "fr" ? "Certificat de garantie de croissance en moins de 9 mois" : lang === "it" ? "Certificato di garanzia di crescita in meno di 9 mesi" : lang === "es" ? "Certificado de garantía de crecimiento en menos de 9 meses" : "Growth guarantee certificate in less than 9 months" },
+              ].map((m, i) => (
+                <div key={i} className="flex items-start gap-3 p-3 rounded-xl" style={{ background: "#0D0D0D" }}>
+                  <span className="text-xl shrink-0">{m.icon}</span>
+                  <span className="text-gray-200 text-sm font-medium">{m.text}</span>
+                </div>
+              ))}
+            </div>
+            <a
+              href="https://wa.link/rdddhh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 gold-gradient text-black font-black text-lg px-10 py-4 rounded-xl hover:opacity-90 transition-opacity pulse-gold"
+            >
+              <span>📱</span> WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" className="py-20 px-4" style={{ background: "#0D0D0D" }}>
         <div className="max-w-2xl mx-auto">
@@ -427,9 +495,9 @@ export default function Home() {
           )}
           <div className="mt-8 text-center">
             <p className="text-gray-500 mb-4">{t.contact.or}</p>
-            <a href="https://wa.me/4915123456789" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-green-600 text-green-400 hover:bg-green-900/20 transition-colors font-medium">
-              📱 {t.contact.whatsapp}
+            <a href="https://wa.link/rdddhh" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-black text-lg gold-gradient text-black hover:opacity-90 transition-opacity pulse-gold">
+              📱 WhatsApp
             </a>
           </div>
         </div>
