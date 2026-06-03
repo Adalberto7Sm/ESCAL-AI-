@@ -21,6 +21,47 @@ const LANGS: { code: Lang; flag: string; label: string }[] = [
 ];
 
 const SLOTS_REMAINING = 33;
+const CONSULT_SLOTS = 7;
+
+type ConsultQuestion = {
+  block: string;
+  q: Record<Lang, string>;
+  loss: number;
+};
+
+const CONSULT_QUESTIONS: ConsultQuestion[] = [
+  // Block 1 — Estadísticas
+  { block: "stats", q: { de: "Kennen Sie Ihre genaue Auslastungsquote (% belegte Tische)?", fr: "Connaissez-vous votre taux d'occupation exact (% tables occupées)?", es: "¿Conoce su tasa de ocupación exacta (% mesas ocupadas)?", en: "Do you know your exact occupancy rate (% tables occupied)?", it: "Conosce il suo tasso di occupazione esatto (% tavoli occupati)?" }, loss: 500 },
+  { block: "stats", q: { de: "Wissen Sie, wie hoch Ihr durchschnittlicher Bon pro Kunde ist?", fr: "Connaissez-vous votre ticket moyen par client?", es: "¿Sabe cuánto gasta en promedio cada cliente?", en: "Do you know your average spend per customer?", it: "Sa quanto spende in media ogni cliente?" }, loss: 400 },
+  { block: "stats", q: { de: "Wissen Sie, wie hoch Ihre Lebensmittelkosten (%) sind?", fr: "Connaissez-vous vos coûts matière (food cost en %)?", es: "¿Conoce su porcentaje de food cost exacto?", en: "Do you know your exact food cost percentage?", it: "Conosce la sua percentuale esatta di food cost?" }, loss: 800 },
+  { block: "stats", q: { de: "Wissen Sie, wie viele Neukunden Sie monatlich gewinnen?", fr: "Savez-vous combien de nouveaux clients vous gagnez chaque mois?", es: "¿Sabe cuántos clientes nuevos gana cada mes?", en: "Do you know how many new customers you gain each month?", it: "Sa quanti nuovi clienti acquisisce ogni mese?" }, loss: 350 },
+  // Block 2 — Digital
+  { block: "digital", q: { de: "Haben Sie eine professionelle Website mit Menü und Reservierung?", fr: "Avez-vous un site web professionnel avec menu et réservation?", es: "¿Tiene un sitio web profesional con menú y reservas?", en: "Do you have a professional website with menu and reservations?", it: "Ha un sito web professionale con menù e prenotazioni?" }, loss: 700 },
+  { block: "digital", q: { de: "Sind Sie aktiv auf Google Maps (Google Business Profile)?", fr: "Êtes-vous actif sur Google Maps (Google Business Profile)?", es: "¿Está activo en Google Maps (Google Business Profile)?", en: "Are you active on Google Maps (Google Business Profile)?", it: "È attivo su Google Maps (Google Business Profile)?" }, loss: 600 },
+  { block: "digital", q: { de: "Haben Sie ein aktives Social-Media-System (mind. 3x/Woche)?", fr: "Avez-vous un système de réseaux sociaux actif (min. 3x/semaine)?", es: "¿Tiene un sistema de redes sociales activo (mín. 3x/semana)?", en: "Do you have an active social media system (min. 3x/week)?", it: "Ha un sistema di social media attivo (min. 3x/settimana)?" }, loss: 500 },
+  { block: "digital", q: { de: "Akzeptieren Sie Online-Reservierungen oder Bestellungen?", fr: "Acceptez-vous les réservations ou commandes en ligne?", es: "¿Acepta reservaciones u órdenes en línea?", en: "Do you accept online reservations or orders?", it: "Accetta prenotazioni o ordini online?" }, loss: 650 },
+  { block: "digital", q: { de: "Haben Sie ein digitales Treueprogramm für Stammkunden?", fr: "Avez-vous un programme de fidélité numérique pour vos clients réguliers?", es: "¿Tiene un programa de fidelización digital para clientes frecuentes?", en: "Do you have a digital loyalty program for regular customers?", it: "Ha un programma fedeltà digitale per i clienti abituali?" }, loss: 400 },
+  // Block 3 — IA / Automatización
+  { block: "ai", q: { de: "Nutzen Sie KI-Tools für Marketing oder Menüentwicklung?", fr: "Utilisez-vous des outils d'IA pour le marketing ou le développement de menu?", es: "¿Usa herramientas de IA para marketing o desarrollo de menú?", en: "Do you use AI tools for marketing or menu development?", it: "Usa strumenti di IA per il marketing o lo sviluppo del menù?" }, loss: 450 },
+  { block: "ai", q: { de: "Haben Sie ein automatisiertes WhatsApp-System für Kunden?", fr: "Avez-vous un système WhatsApp automatisé pour les clients?", es: "¿Tiene un sistema de WhatsApp automatizado para clientes?", en: "Do you have an automated WhatsApp system for customers?", it: "Ha un sistema WhatsApp automatizzato per i clienti?" }, loss: 550 },
+  { block: "ai", q: { de: "Verwenden Sie digitale Tools für Kostenkontrolle und Analyse?", fr: "Utilisez-vous des outils numériques pour le contrôle des coûts et l'analyse?", es: "¿Usa herramientas digitales para control de costos y análisis?", en: "Do you use digital tools for cost control and analysis?", it: "Usa strumenti digitali per il controllo dei costi e l'analisi?" }, loss: 700 },
+  // Block 4 — Actividades
+  { block: "events", q: { de: "Organisieren Sie regelmäßig Events (Themenabende, Partys, etc.)?", fr: "Organisez-vous régulièrement des événements (soirées à thème, fêtes, etc.)?", es: "¿Organiza eventos regularmente (noches temáticas, fiestas, etc.)?", en: "Do you regularly organise events (theme nights, parties, etc.)?", it: "Organizza regolarmente eventi (serate a tema, feste, ecc.)?" }, loss: 900 },
+  { block: "events", q: { de: "Haben Sie ein System für Firmen- oder Gruppenveranstaltungen?", fr: "Avez-vous un système pour les événements d'entreprise ou de groupe?", es: "¿Tiene un sistema para eventos corporativos o de grupos?", en: "Do you have a system for corporate or group events?", it: "Ha un sistema per eventi aziendali o di gruppo?" }, loss: 600 },
+  { block: "events", q: { de: "Nutzen Sie saisonale Aktionen, um Umsatzspitzen zu erzeugen?", fr: "Utilisez-vous des promotions saisonnières pour créer des pics de chiffre d'affaires?", es: "¿Aprovecha fechas especiales y temporadas para generar picos de ventas?", en: "Do you use seasonal promotions to generate revenue peaks?", it: "Usa promozioni stagionali per generare picchi di fatturato?" }, loss: 400 },
+  // Block 5 — Escalabilidad
+  { block: "scale", q: { de: "Könnten Sie 1 Woche abwesend sein, ohne dass der Betrieb stoppt?", fr: "Pourriez-vous être absent 1 semaine sans que votre établissement s'arrête?", es: "¿Podría estar 1 semana fuera sin que su negocio se detenga?", en: "Could you be away for 1 week without your business stopping?", it: "Potrebbe essere assente 1 settimana senza che il business si fermi?" }, loss: 1200 },
+  { block: "scale", q: { de: "Haben Sie ein dokumentiertes Betriebshandbuch für Ihr Team?", fr: "Avez-vous un manuel opérationnel documenté pour votre équipe?", es: "¿Tiene un manual operativo documentado para su equipo?", en: "Do you have a documented operational manual for your team?", it: "Ha un manuale operativo documentato per il suo team?" }, loss: 500 },
+  { block: "scale", q: { de: "Haben Sie einen klaren Wachstumsplan für die nächsten 12 Monate?", fr: "Avez-vous un plan de croissance clair pour les 12 prochains mois?", es: "¿Tiene un plan de crecimiento claro para los próximos 12 meses?", en: "Do you have a clear growth plan for the next 12 months?", it: "Ha un piano di crescita chiaro per i prossimi 12 mesi?" }, loss: 750 },
+];
+
+const BLOCK_LABELS: Record<string, Record<Lang, string>> = {
+  stats:   { de: "📊 STATISTIKEN", fr: "📊 STATISTIQUES", es: "📊 ESTADÍSTICAS", en: "📊 STATISTICS", it: "📊 STATISTICHE" },
+  digital: { de: "💻 DIGITALE PRÄSENZ", fr: "💻 PRÉSENCE DIGITALE", es: "💻 PRESENCIA DIGITAL", en: "💻 DIGITAL PRESENCE", it: "💻 PRESENZA DIGITALE" },
+  ai:      { de: "🤖 KI & AUTOMATISIERUNG", fr: "🤖 IA & AUTOMATISATION", es: "🤖 IA & AUTOMATIZACIÓN", en: "🤖 AI & AUTOMATION", it: "🤖 IA & AUTOMAZIONE" },
+  events:  { de: "🎪 EVENTS & AKTIVITÄTEN", fr: "🎪 ÉVÉNEMENTS & ACTIVITÉS", es: "🎪 EVENTOS & ACTIVIDADES", en: "🎪 EVENTS & ACTIVITIES", it: "🎪 EVENTI & ATTIVITÀ" },
+  scale:   { de: "🚀 SKALIERBARKEIT", fr: "🚀 SCALABILITÉ", es: "🚀 ESCALABILIDAD", en: "🚀 SCALABILITY", it: "🚀 SCALABILITÀ" },
+};
 
 const planBg: Record<string, string> = {
   free: "bg-[#1A1A1A] border-[#333]",
@@ -39,6 +80,11 @@ export default function Home() {
   const [formSent, setFormSent] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [consultStep, setConsultStep] = useState(-1);
+  const [consultAnswers, setConsultAnswers] = useState<("yes"|"no"|"none")[]>([]);
+  const [consultDone, setConsultDone] = useState(false);
+  const [flashRed, setFlashRed] = useState(false);
+  const [consultSlots] = useState(CONSULT_SLOTS);
 
   const t = messages[lang];
 
@@ -124,6 +170,9 @@ export default function Home() {
             <button onClick={() => scrollTo("learning")} className="text-sm text-[#D4AF37] font-bold hover:text-[#FFD700] transition-colors">
               {lang === "de" ? "Lernen" : lang === "fr" ? "Formation" : lang === "it" ? "Formazione" : lang === "es" ? "Aprendizaje" : "Learning"}
             </button>
+            <button onClick={() => scrollTo("consultoria")} className="text-sm font-bold text-[#FFD700] border border-[#D4AF37]/60 px-3 py-1 rounded-full hover:bg-[#D4AF37]/10 transition-colors">
+              {lang === "de" ? "Beratung" : lang === "fr" ? "Consultation" : lang === "it" ? "Consulenza" : lang === "es" ? "Consultoría" : "Consultation"}
+            </button>
             <button onClick={() => scrollTo("contact")} className="text-sm text-gray-300 hover:text-[#D4AF37] transition-colors">{t.nav.contact}</button>
           </div>
 
@@ -147,6 +196,9 @@ export default function Home() {
             </button>
             <button onClick={() => scrollTo("learning")} className="text-left text-[#D4AF37] font-bold">
               {lang === "de" ? "Lernen" : lang === "fr" ? "Formation" : lang === "it" ? "Formazione" : lang === "es" ? "Aprendizaje" : "Learning"}
+            </button>
+            <button onClick={() => scrollTo("consultoria")} className="text-left text-[#FFD700] font-bold">
+              {lang === "de" ? "Beratung 1:1" : lang === "fr" ? "Consultation 1:1" : lang === "it" ? "Consulenza 1:1" : lang === "es" ? "Consultoría 1:1" : "Consultation 1:1"}
             </button>
             <button onClick={() => scrollTo("contact")} className="text-left text-gray-300 hover:text-[#D4AF37]">{t.nav.contact}</button>
           </div>
@@ -505,6 +557,192 @@ export default function Home() {
           <p className="text-gray-500 text-xs mt-4">
             {lang === "es" || lang === "de" || lang === "fr" || lang === "it" ? "🇪🇸 Disponible en Español" : "🇪🇸 Available in Spanish"}
           </p>
+        </div>
+      </section>
+
+      {/* CONSULTORÍA 1A1 */}
+      <section id="consultoria" className="py-20 px-4" style={{ background: "#0A0500" }}>
+        <div className="max-w-2xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37] mb-6 pulse-gold" style={{ background: "#1A0F00" }}>
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              <span className="text-[#D4AF37] font-black text-sm">
+                {lang === "de" ? `NUR NOCH ${consultSlots} PLÄTZE` : lang === "fr" ? `PLUS QUE ${consultSlots} PLACES` : lang === "it" ? `SOLO ${consultSlots} POSTI RIMASTI` : lang === "es" ? `SOLO QUEDAN ${consultSlots} CUPOS` : `ONLY ${consultSlots} SPOTS LEFT`}
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black gold-text mb-3">
+              {lang === "de" ? "BERATUNG 1:1" : lang === "fr" ? "CONSULTATION 1:1" : lang === "it" ? "CONSULENZA 1:1" : lang === "es" ? "CONSULTORÍA 1:1" : "CONSULTATION 1:1"}
+            </h2>
+            <p className="text-2xl font-black text-white mb-2">
+              {lang === "de" ? "WACHSTUMSBERATUNG" : lang === "fr" ? "CONSULTATION DE CROISSANCE" : lang === "it" ? "CONSULENZA DI CRESCITA" : lang === "es" ? "CONSULTORÍA DE CRECIMIENTO" : "GROWTH CONSULTATION"}
+            </p>
+            <div className="inline-block px-6 py-2 rounded-full gold-gradient text-black font-black text-xl mb-4">
+              CHF 999 — CASH
+            </div>
+            <p className="text-gray-300 max-w-lg mx-auto text-sm leading-relaxed">
+              {lang === "de" ? "In 60 Minuten zeige ich Ihnen genau, wo Ihr Betrieb täglich Geld verliert — live, vor Ihren Augen, mit echten Zahlen." : lang === "fr" ? "En 60 minutes je vous montre exactement où votre établissement perd de l'argent chaque jour — en direct, sous vos yeux, avec de vrais chiffres." : lang === "it" ? "In 60 minuti le mostro esattamente dove il suo locale perde soldi ogni giorno — dal vivo, davanti ai suoi occhi, con numeri reali." : lang === "es" ? "En 60 minutos le muestro exactamente dónde su negocio pierde dinero cada día — en vivo, frente a sus ojos, con números reales." : "In 60 minutes I show you exactly where your business loses money every day — live, before your eyes, with real numbers."}
+            </p>
+          </div>
+
+          {/* Wizard */}
+          <div className={`rounded-2xl p-6 md:p-8 transition-all duration-300 ${flashRed ? "ring-4 ring-red-500" : "ring-1 ring-[#D4AF37]/40"}`} style={{ background: "#1A0F00" }}>
+            {consultStep === -1 && !consultDone && (
+              <div className="text-center">
+                <div className="text-7xl mb-6">💰</div>
+                <h3 className="text-2xl font-black text-white mb-4">
+                  {lang === "de" ? "RENTABILITÄTS-DIAGNOSE" : lang === "fr" ? "DIAGNOSTIC DE RENTABILITÉ" : lang === "it" ? "DIAGNOSI DI REDDITIVITÀ" : lang === "es" ? "DIAGNÓSTICO DE RENTABILIDAD" : "PROFITABILITY DIAGNOSIS"}
+                </h3>
+                <p className="text-gray-300 mb-3">
+                  {lang === "de" ? `${CONSULT_QUESTIONS.length} Fragen · 5 Minuten · Ihr tatsächlicher monatlicher Verlust` : lang === "fr" ? `${CONSULT_QUESTIONS.length} questions · 5 minutes · Votre perte mensuelle réelle` : lang === "it" ? `${CONSULT_QUESTIONS.length} domande · 5 minuti · La sua perdita mensile reale` : lang === "es" ? `${CONSULT_QUESTIONS.length} preguntas · 5 minutos · Su pérdida mensual real` : `${CONSULT_QUESTIONS.length} questions · 5 minutes · Your real monthly loss`}
+                </p>
+                <p className="text-[#D4AF37] text-sm font-bold mb-8">
+                  {lang === "de" ? "Antworten Sie ehrlich. Jedes NEIN kostet Sie echtes Geld." : lang === "fr" ? "Répondez honnêtement. Chaque NON vous coûte de l'argent réel." : lang === "it" ? "Risponda onestamente. Ogni NO le costa soldi reali." : lang === "es" ? "Responda con honestidad. Cada NO le cuesta dinero real." : "Answer honestly. Every NO costs you real money."}
+                </p>
+                <button
+                  onClick={() => { setConsultAnswers([]); setConsultDone(false); setConsultStep(0); }}
+                  className="gold-gradient text-black font-black text-lg px-10 py-4 rounded-xl hover:opacity-90 transition-opacity pulse-gold"
+                >
+                  {lang === "de" ? "DIAGNOSE STARTEN" : lang === "fr" ? "COMMENCER LE DIAGNOSTIC" : lang === "it" ? "INIZIA LA DIAGNOSI" : lang === "es" ? "INICIAR DIAGNÓSTICO" : "START DIAGNOSIS"}
+                </button>
+              </div>
+            )}
+
+            {consultStep >= 0 && !consultDone && (() => {
+              const q = CONSULT_QUESTIONS[consultStep];
+              const totalLoss = consultAnswers.reduce((acc, ans, idx) => ans !== "yes" ? acc + CONSULT_QUESTIONS[idx].loss : acc, 0);
+              const currentBlock = q.block;
+              return (
+                <div>
+                  {/* Progress */}
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-[#D4AF37] font-bold text-sm">{consultStep + 1} / {CONSULT_QUESTIONS.length}</span>
+                    <span className="text-red-400 font-black text-sm">
+                      {lang === "de" ? `Verlust: CHF ${totalLoss.toLocaleString()}` : lang === "fr" ? `Perte: CHF ${totalLoss.toLocaleString()}` : lang === "it" ? `Perdita: CHF ${totalLoss.toLocaleString()}` : lang === "es" ? `Pérdida: CHF ${totalLoss.toLocaleString()}` : `Loss: CHF ${totalLoss.toLocaleString()}`}
+                    </span>
+                  </div>
+                  <div className="w-full h-1 rounded-full bg-[#333] mb-5">
+                    <div className="h-1 rounded-full bg-[#D4AF37] transition-all" style={{ width: `${((consultStep + 1) / CONSULT_QUESTIONS.length) * 100}%` }} />
+                  </div>
+
+                  {/* Block label */}
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-black text-black gold-gradient mb-4">
+                    {BLOCK_LABELS[currentBlock][lang]}
+                  </div>
+
+                  {/* Question */}
+                  <h3 className="text-xl font-bold text-white mb-6 leading-snug">{q.q[lang]}</h3>
+
+                  {/* Loss indicator */}
+                  <div className="flex items-center gap-2 mb-6 p-3 rounded-xl" style={{ background: "#0D0D0D" }}>
+                    <span className="text-red-400">⚠</span>
+                    <span className="text-sm text-gray-400">
+                      {lang === "de" ? `Bei NEIN: +CHF ${q.loss.toLocaleString()}/Monat verloren` : lang === "fr" ? `Si NON: +CHF ${q.loss.toLocaleString()}/mois perdu` : lang === "it" ? `Se NO: +CHF ${q.loss.toLocaleString()}/mese perso` : lang === "es" ? `Si NO: +CHF ${q.loss.toLocaleString()}/mes perdido` : `If NO: +CHF ${q.loss.toLocaleString()}/month lost`}
+                    </span>
+                  </div>
+
+                  {/* Answer buttons */}
+                  <div className="grid grid-cols-3 gap-3">
+                    {(["yes","no","none"] as const).map((ans) => {
+                      const labels: Record<string, Record<Lang, string>> = {
+                        yes:  { de: "✓ JA", fr: "✓ OUI", es: "✓ SÍ", en: "✓ YES", it: "✓ SÌ" },
+                        no:   { de: "✗ NEIN", fr: "✗ NON", es: "✗ NO", en: "✗ NO", it: "✗ NO" },
+                        none: { de: "— KEIN", fr: "— AUCUN", es: "— NO TENGO", en: "— NONE", it: "— NESSUNO" },
+                      };
+                      const isNeg = ans !== "yes";
+                      return (
+                        <button
+                          key={ans}
+                          onClick={() => {
+                            if (isNeg) {
+                              setFlashRed(true);
+                              setTimeout(() => setFlashRed(false), 600);
+                            }
+                            const newAnswers = [...consultAnswers, ans];
+                            setConsultAnswers(newAnswers);
+                            if (consultStep + 1 >= CONSULT_QUESTIONS.length) {
+                              setConsultDone(true);
+                              setConsultStep(CONSULT_QUESTIONS.length);
+                            } else {
+                              setConsultStep(consultStep + 1);
+                            }
+                          }}
+                          className={`py-4 rounded-xl font-black text-sm transition-all ${
+                            ans === "yes"
+                              ? "bg-green-900/40 border border-green-600 text-green-400 hover:bg-green-800/60"
+                              : "bg-red-900/30 border border-red-800/60 text-red-400 hover:bg-red-900/60"
+                          }`}
+                        >
+                          {labels[ans][lang]}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {consultDone && (() => {
+              const totalLoss = consultAnswers.reduce((acc, ans, idx) => ans !== "yes" ? acc + CONSULT_QUESTIONS[idx].loss : acc, 0);
+              const noCount = consultAnswers.filter(a => a !== "yes").length;
+              const pct = Math.round((noCount / CONSULT_QUESTIONS.length) * 100);
+              const level = pct >= 70 ? "critical" : pct >= 40 ? "warning" : "ok";
+              return (
+                <div className="text-center">
+                  <div className="text-6xl mb-4">{level === "critical" ? "🚨" : level === "warning" ? "⚡" : "📈"}</div>
+                  <h3 className="text-2xl font-black text-white mb-2">
+                    {lang === "de" ? "DIAGNOSE ABGESCHLOSSEN" : lang === "fr" ? "DIAGNOSTIC COMPLÉTÉ" : lang === "it" ? "DIAGNOSI COMPLETATA" : lang === "es" ? "DIAGNÓSTICO COMPLETADO" : "DIAGNOSIS COMPLETED"}
+                  </h3>
+
+                  {/* Total loss box */}
+                  <div className="my-6 p-6 rounded-2xl border-2 border-red-500" style={{ background: "#1A0000" }}>
+                    <p className="text-gray-400 text-sm mb-1">
+                      {lang === "de" ? "Ihr geschätzter monatlicher Verlust:" : lang === "fr" ? "Votre perte mensuelle estimée:" : lang === "it" ? "La sua perdita mensile stimata:" : lang === "es" ? "Su pérdida mensual estimada:" : "Your estimated monthly loss:"}
+                    </p>
+                    <p className="text-5xl font-black text-red-400">CHF {totalLoss.toLocaleString()}</p>
+                    <p className="text-gray-500 text-sm mt-2">
+                      {lang === "de" ? `= CHF ${(totalLoss * 12).toLocaleString()} pro Jahr` : lang === "fr" ? `= CHF ${(totalLoss * 12).toLocaleString()} par an` : lang === "it" ? `= CHF ${(totalLoss * 12).toLocaleString()} all'anno` : lang === "es" ? `= CHF ${(totalLoss * 12).toLocaleString()} por año` : `= CHF ${(totalLoss * 12).toLocaleString()} per year`}
+                    </p>
+                  </div>
+
+                  {/* Score summary */}
+                  <div className="mb-6 p-4 rounded-xl" style={{ background: "#0D0D0D" }}>
+                    <p className="text-gray-300 text-sm">
+                      {lang === "de" ? `${noCount} von ${CONSULT_QUESTIONS.length} Bereichen verlieren Geld` : lang === "fr" ? `${noCount} sur ${CONSULT_QUESTIONS.length} domaines perdent de l'argent` : lang === "it" ? `${noCount} su ${CONSULT_QUESTIONS.length} aree perdono soldi` : lang === "es" ? `${noCount} de ${CONSULT_QUESTIONS.length} áreas perdiendo dinero` : `${noCount} of ${CONSULT_QUESTIONS.length} areas losing money`}
+                    </p>
+                    <div className="w-full h-3 rounded-full bg-[#333] mt-2">
+                      <div className="h-3 rounded-full bg-red-500 transition-all" style={{ width: `${pct}%` }} />
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="p-5 rounded-2xl border border-[#D4AF37] mb-6" style={{ background: "#1A0F00" }}>
+                    <p className="text-[#D4AF37] font-black text-lg mb-2">
+                      {lang === "de" ? "PRIVATE BERATUNG — CHF 999 CASH" : lang === "fr" ? "CONSULTATION PRIVÉE — CHF 999 CASH" : lang === "it" ? "CONSULENZA PRIVATA — CHF 999 CASH" : lang === "es" ? "CONSULTORÍA PRIVADA — CHF 999 CASH" : "PRIVATE CONSULTATION — CHF 999 CASH"}
+                    </p>
+                    <p className="text-gray-300 text-sm mb-4">
+                      {lang === "de" ? "60 Minuten · Komplette Analyse · Sofortiger Aktionsplan · Geschenke im Wert von CHF 2.000" : lang === "fr" ? "60 minutes · Analyse complète · Plan d'action immédiat · Cadeaux d'une valeur de CHF 2.000" : lang === "it" ? "60 minuti · Analisi completa · Piano d'azione immediato · Regali del valore di CHF 2.000" : lang === "es" ? "60 minutos · Análisis completo · Plan de acción inmediato · Regalos por valor de CHF 2.000" : "60 minutes · Complete analysis · Immediate action plan · Gifts worth CHF 2.000"}
+                    </p>
+                    <a
+                      href="https://wa.link/rdddhh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 gold-gradient text-black font-black text-lg px-8 py-4 rounded-xl hover:opacity-90 transition-opacity pulse-gold w-full justify-center"
+                    >
+                      📱 {lang === "de" ? "JETZT BUCHEN — WhatsApp" : lang === "fr" ? "RÉSERVER MAINTENANT — WhatsApp" : lang === "it" ? "PRENOTA ORA — WhatsApp" : lang === "es" ? "RESERVAR AHORA — WhatsApp" : "BOOK NOW — WhatsApp"}
+                    </a>
+                  </div>
+
+                  <button
+                    onClick={() => { setConsultAnswers([]); setConsultDone(false); setConsultStep(-1); }}
+                    className="text-gray-500 text-sm hover:text-gray-300 transition-colors"
+                  >
+                    {lang === "de" ? "Neustart" : lang === "fr" ? "Recommencer" : lang === "it" ? "Ricomincia" : lang === "es" ? "Reiniciar" : "Restart"}
+                  </button>
+                </div>
+              );
+            })()}
+          </div>
         </div>
       </section>
 
