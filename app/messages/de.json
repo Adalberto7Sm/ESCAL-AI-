@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "diagnose": "Diagnose",
+    "solution": "Lösung",
+    "guarantee": "Garantie",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Nur noch 33 Plätze in 2026",
+    "headline1": "Wie viel Geld verliert",
+    "headline2": "Ihr Restaurant",
+    "headline3": "täglich?",
+    "sub": "In 60 Minuten zeige ich Ihnen genau, wo das Geld verschwindet — und wie Sie es zurückbekommen.",
+    "cta_primary": "KOSTENLOSE DIAGNOSE — 60 MIN",
+    "cta_secondary": "Alle Pläne ansehen",
+    "trust": "30 Jahre Gastronomie · 41 Jahre Deutschland · Keine Agentur — ich bin der Experte"
+  },
+  "pain": {
+    "title": "Erkennen Sie sich wieder?",
+    "items": [
+      "Umsatz stagniert seit Monaten oder Jahren",
+      "Sie arbeiten 70+ Stunden/Woche — das Geschäft läuft trotzdem nicht",
+      "Keine digitale Präsenz — die Konkurrenz stiehlt Ihre Kunden",
+      "Kosten steigen, Gewinne sinken — Sie wissen nicht warum",
+      "Keine Zeit für Innovation, Marketing oder Wachstum"
+    ],
+    "conclusion": "Das Problem ist nicht der Markt. Das Problem ist das fehlende System."
+  },
+  "quiz": {
+    "title": "Schnell-Diagnose",
+    "subtitle": "7 Fragen · 3 Minuten · Sofortiges Ergebnis",
+    "questions": [
+      {
+        "q": "Können Sie Ihr Alleinstellungsmerkmal in einem Satz erklären?",
+        "a": ["Ja, klar", "Ungefähr", "Nein"]
+      },
+      {
+        "q": "Generiert Ihr Betrieb jeden Monat echten Gewinn?",
+        "a": ["Ja", "Manchmal", "Nein"]
+      },
+      {
+        "q": "Könnten Sie eine Woche abwesend sein, ohne dass alles stoppt?",
+        "a": ["Ja", "Mit Mühe", "Nein"]
+      },
+      {
+        "q": "Haben Sie ein aktives Online-Marketing-System?",
+        "a": ["Ja", "Teilweise", "Nein"]
+      },
+      {
+        "q": "Organisieren Sie regelmäßig Events oder Aktionen?",
+        "a": ["Oft", "Selten", "Nie"]
+      },
+      {
+        "q": "Haben Sie Ihre Marke rechtlich registriert?",
+        "a": ["Ja", "In Bearbeitung", "Nein"]
+      },
+      {
+        "q": "Haben Sie einen klaren Wachstumsplan für die nächsten 12 Monate?",
+        "a": ["Ja", "Teilweise", "Nein"]
+      }
+    ],
+    "result_high": "Gut aufgestellt — aber es gibt wichtige Wachstumschancen",
+    "result_mid": "Ihr Betrieb stagniert — ein System kann das ändern",
+    "result_low": "ALARM: Ihr Betrieb verliert täglich Geld — sofortige Maßnahmen nötig",
+    "loss_text": "Geschätzter monatlicher Verlust",
+    "cta": "JETZT KOSTENLOSE BERATUNG BUCHEN"
+  },
+  "solution": {
+    "badge": "Das System",
+    "title": "#MYGASTROIA#",
+    "subtitle": "IHRE EIGENE KI — IN IHREM BETRIEB",
+    "tagline": "DIGITALE TRANSFORMATION IN 365 TAGEN",
+    "mission": "Erst helfe ich Ihnen zu sparen. Dann helfe ich Ihnen mehr zu verdienen. Sie zahlen aus dem Geld, das ich Ihnen spare. WIN-WIN — alle gewinnen.",
+    "steps": [
+      { "n": "01", "title": "KAPITALVERLUSTE STOPPEN", "desc": "Wir analysieren, wo täglich Geld verloren geht — und stoppen es sofort." },
+      { "n": "02", "title": "GELD ZURÜCKHOLEN", "desc": "Unnötige Kosten reduzieren. Ressourcen optimieren. Effizienz maximieren." },
+      { "n": "03", "title": "GESPARTE MITTEL SICHERN", "desc": "Finanzkontrollsystem das ganze Jahr aktiv — das Geld bleibt, wo es hingehört." },
+      { "n": "04", "title": "MEHR VERDIENEN", "desc": "Neue Konzepte, Events, KI-Tools, neue Einnahmequellen, Marketing 365 Tage." },
+      { "n": "05", "title": "365 TAGE WACHSTUM", "desc": "Ständige Begleitung. Aktualisierung. Optimierung. Ihr Betrieb wächst Monat für Monat." }
+    ]
+  },
+  "plans": {
+    "title": "Die 8 Stufen",
+    "subtitle": "Von kostenlos bis exklusiv — der richtige Einstieg für jeden Betrieb",
+    "per_month": "/Monat",
+    "contract": "Mindestvertrag 12 Monate",
+    "includes": "Enthält in ALLEN Plänen",
+    "included_items": ["Werbebank 365 Tage", "Wartung & Updates", "Technischer Support in Echtzeit", "Wachstumsgarantie 9 Monate"],
+    "popular": "Beliebteste Wahl",
+    "exclusive": "Exklusiv Basel",
+    "list": [
+      { "n": "0", "name": "KOSTENLOSE DIAGNOSE", "price": "0 €", "desc": "60 Min · Kein Risiko · Sofortige Ergebnisse", "type": "free" },
+      { "n": "1", "name": "PRIVATE BERATUNG", "price": "999 €", "desc": "30–40 Min · Vollständige Analyse · Aktionsplan + Geschenke im Wert von 2.000 €", "type": "once" },
+      { "n": "2", "name": "STARTER", "price": "1.299 €", "desc": "KI-Diagnose · Werbebank · SEO lokal · Social Media Basis · Support", "type": "monthly" },
+      { "n": "3", "name": "GROWTH", "price": "1.999 €", "desc": "Tägliches KI-Marketing · 50+ Events-Bank · Akademie · E-Mail-Marketing · SEO Pro", "type": "monthly" },
+      { "n": "4", "name": "PREMIUM", "price": "2.999 €", "desc": "Alles aus Growth + Persönliches Coaching · Markenaufbau · App · WhatsApp-Bot 24/7 · Vollständiges digitales Ökosystem", "type": "monthly", "popular": true },
+      { "n": "5", "name": "ELITE", "price": "7.777 €", "desc": "Mein Monatsgehalt · Vollzeit-Arbeit für ein Unternehmen · Franchise · Eingetragene Marke · Exklusive App", "type": "monthly" },
+      { "n": "6", "name": "DIREKTOR HYBRID", "price": "CHF 11.000", "desc": "18 Monate · 8 Expertenbereiche in einer Person · Einsparung CHF 276.000/Jahr · Wohnung inklusive", "type": "monthly", "exclusive": true },
+      { "n": "7", "name": "GASTRO-IMMO", "price": "Auf Anfrage", "desc": "Komplettsystem · Transformation + Skalierung + Markteinführung · 1 Platz verfügbar", "type": "special" }
+    ]
+  },
+  "compare": {
+    "title": "1 Person vs. 5 Spezialisten",
+    "subtitle": "Die mathematische Entscheidung",
+    "col_a": "5 Spezialisten (Basel)",
+    "col_b": "#MYGASTROIA#",
+    "rows": [
+      ["Küchenchef / Gastroberater", "CHF 6.500", "✓"],
+      ["Verwaltung / Controller", "CHF 5.500", "✓"],
+      ["IT / Systeme", "CHF 8.000", "✓"],
+      ["Digitales Marketing", "CHF 5.000", "✓"],
+      ["Software-Entwickler", "CHF 9.000", "✓"]
+    ],
+    "total_a": "CHF 34.000 / Monat",
+    "total_b": "CHF 11.000 / Monat",
+    "saving": "Sie sparen CHF 276.000 pro Jahr"
+  },
+  "guarantee": {
+    "title": "Die Garantie",
+    "subtitle": "Die kein anderer in Basel gibt",
+    "items": [
+      "Wachstumsgarantie in weniger als 9 Monaten",
+      "3 Monate Aufbau + 6 Monate Wachstum",
+      "Wenn ich das Ziel nicht erreiche — ich arbeite KOSTENLOS bis zum Vertragsende",
+      "Wenn der Vertrag endet ohne Wachstum — ich arbeite weiter KOSTENLOS",
+      "Keine Agentur in Europa gibt diese Garantie. Ich schon."
+    ],
+    "badge": "WACHSTUMSGARANTIE-ZERTIFIKAT"
+  },
+  "cases": {
+    "title": "Erkennnen Sie Ihren Betrieb?",
+    "list": [
+      { "type": "Traditionelles Restaurant", "problem": "Stagnation seit 3 Jahren · Keine digitale Präsenz", "result": "Monat 6: +40% Umsatz · –25% Kosten · Neue Kundschaft 25–45 Jahre" },
+      { "type": "Bar / Café", "problem": "Starker Wettbewerb · Kunden kommen nicht zurück", "result": "Monat 6: +50% Stammkunden · Events mit 100% Auslastung" },
+      { "type": "Hotel-Restaurant", "problem": "Nur 20% der Gäste nutzen das Restaurant", "result": "Monat 6: Rentabel · 60% Hotelgäste · 40% externe Kunden" },
+      { "type": "Familienbetrieb", "problem": "Inhaber arbeiten 80h/Woche · Kein System", "result": "Monat 6: 25 Stunden/Woche zurückgewonnen · +35% Umsatz" }
+    ]
+  },
+  "contact": {
+    "title": "Jetzt starten",
+    "subtitle": "Kostenlose 60-Minuten-Diagnose — ohne Verpflichtung",
+    "name": "Ihr Name",
+    "business": "Name des Betriebs",
+    "city": "Stadt (Basel / Umgebung)",
+    "phone": "WhatsApp-Nummer",
+    "plan": "Welcher Plan interessiert Sie?",
+    "message": "Ihr größtes Problem im Betrieb heute",
+    "submit": "DIAGNOSE ANFRAGEN",
+    "or": "Oder direkt kontaktieren",
+    "whatsapp": "WhatsApp schreiben",
+    "slots": "Noch {n} Plätze in 2026 verfügbar",
+    "success": "Vielen Dank! Ich melde mich innerhalb von 24 Stunden.",
+    "plans_select": ["Kostenlose Diagnose", "Private Beratung 999€", "Starter 1.299€/Monat", "Growth 1.999€/Monat", "Premium 2.999€/Monat", "Elite 7.777€/Monat", "Direktor Hybrid CHF 11.000", "GASTRO-IMMO"]
+  },
+  "footer": {
+    "tagline": "Digitale Transformation in 365 Tagen",
+    "rights": "Alle Rechte vorbehalten"
+  }
+}
