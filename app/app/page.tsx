@@ -283,7 +283,9 @@ export default function Home() {
       <section id="plans" className="py-20 px-4" style={{ background: "#0D0D0D" }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xs font-black tracking-[0.3em] text-[#D4AF37]/60 mb-2">ESCALERA DE VALOR</p>
+            <p className="text-xs font-black tracking-[0.3em] mb-2" style={{ color: "#D4AF3799" }}>
+              {lang === "de" ? "WERTETREPPE" : lang === "fr" ? "ÉCHELLE DE VALEUR" : lang === "it" ? "SCALA DI VALORE" : lang === "es" ? "ESCALERA DE VALOR" : "VALUE LADDER"}
+            </p>
             <h2 className="text-3xl md:text-4xl font-black mb-3 gold-text">{t.plans.title}</h2>
             <p className="text-gray-400">{t.plans.subtitle}</p>
           </div>
