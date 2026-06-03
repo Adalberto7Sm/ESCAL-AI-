@@ -784,6 +784,84 @@ export default function Home() {
         </div>
       </section>
 
+      {/* POR QUÉ CONTRATARME */}
+      <section className="py-20 px-4" style={{ background: "#111" }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1 text-sm font-bold text-[#D4AF37] border border-[#D4AF37]/40 rounded-full mb-4">
+              {lang === "de" ? "Der Experte" : lang === "fr" ? "L'Expert" : lang === "it" ? "L'Esperto" : lang === "es" ? "El Experto" : "The Expert"}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black gold-text mb-3">
+              {lang === "de" ? "WARUM SIE MICH BEAUFTRAGEN SOLLTEN" : lang === "fr" ? "POURQUOI VOUS DEVRIEZ ME CHOISIR" : lang === "it" ? "PERCHÉ DOVREBBE SCEGLIERMI" : lang === "es" ? "¿POR QUÉ LOS DUEÑOS DE NEGOCIOS DEBEN CONTRATARME?" : "WHY BUSINESS OWNERS SHOULD HIRE ME"}
+            </h2>
+          </div>
+
+          {/* Bio card */}
+          <div className="rounded-2xl p-8 mb-10 card-premium border-[#D4AF37]/60" style={{ borderWidth: 1 }}>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 rounded-full gold-gradient flex items-center justify-center text-2xl font-black text-black shrink-0">A</div>
+              <div>
+                <p className="font-black text-[#D4AF37] text-lg">Adalberto Cirilo Ramos Alfonso</p>
+                <p className="text-gray-400 text-sm">
+                  {lang === "de" ? "Gastronomieberater & KI-Experte · Basel" : lang === "fr" ? "Consultant Gastronomique & Expert IA · Bâle" : lang === "it" ? "Consulente Gastronomico & Esperto IA · Basilea" : lang === "es" ? "Consultor Gastronómico & Asesor IA · Basel" : "Gastronomy Consultant & AI Advisor · Basel"}
+                </p>
+              </div>
+            </div>
+            <div className="text-gray-200 text-sm leading-relaxed space-y-4">
+              <p>Soy un profesional multidisciplinario con certificaciones avanzadas (en español y en alemán) en Marketing, Tráfico Web, SEO Local, Gestión de Redes Sociales, Copywriting, redacción de ofertas, cartas de ventas y presentaciones vendedoras.</p>
+              <p>Soy desarrollador y diseñador web/gráfico, optimizador y posicionador SEO, redactor de contenido para plataformas digitales y experto en Consultoría Gastronómica y Asesoría en Inteligencia Artificial.</p>
+              <p>Estoy especializado en el desarrollo de aplicaciones con IA diseñadas específicamente para optimizar la rentabilidad del sector HORECA. Vivo en Alemania desde 1984 y me mantengo activo en la gastronomía desde 1996. Además, soy organizador de eventos afro-latinoamericanos desde 1997.</p>
+              <p className="text-[#D4AF37] font-black">FUI GERENTE Y DUEÑO DE MIS PROPIOS NEGOCIOS: CATERING, DELIVERY, BARES, IMBISS Y UNA DISCOTECA. ¡SÉ LO QUE ES SER UN DUEÑO DE NEGOCIO!</p>
+              <p>Gané dinero, perdí dinero, cometí errores y logré grandes aciertos. Entendí que debía dominar el marketing, la inteligencia artificial y las nuevas tecnologías para no depender de nadie. Lo aprendí, lo apliqué y hoy soy consultor porque poseo lo que a la mayoría de los dueños de negocios les falta.</p>
+              <p>Soy consultor gastronómico y asesor de IA: sé cómo ayudarte. Mi misión es fusionar la hospitalidad tradicional con la vanguardia tecnológica para transformar establecimientos estancados en negocios de alto rendimiento.</p>
+              <div className="mt-4 p-4 rounded-xl" style={{ background: "#1A0F00" }}>
+                <p className="text-[#D4AF37] font-black">PRIMERO TE AYUDO A ECONOMIZAR Y DESPUÉS TE AYUDO A GANAR MÁS DINERO TODOS LOS DÍAS. ESA ES MI META.</p>
+                <p className="text-gray-300 text-sm mt-2">📱 WhatsApp directo: <span className="text-[#D4AF37] font-bold">+4915111115353</span></p>
+              </div>
+            </div>
+          </div>
+
+          {/* Ventajas y beneficios */}
+          <div className="grid md:grid-cols-2 gap-4 mb-10">
+            {[
+              { icon: "🏆", title: lang === "de" ? "30+ Jahre Gastronomie-Erfahrung" : lang === "fr" ? "30+ ans d'expérience en gastronomie" : lang === "it" ? "30+ anni di esperienza in gastronomia" : lang === "es" ? "30+ años de experiencia en gastronomía" : "30+ years of gastronomy experience",
+                desc: lang === "de" ? "Seit 1996 aktiv in der Gastronomie. Ich weiß, wie ein Betrieb von innen funktioniert." : lang === "fr" ? "Actif en gastronomie depuis 1996. Je sais comment fonctionne un établissement de l'intérieur." : lang === "it" ? "Attivo nella gastronomia dal 1996. So come funziona un locale dall'interno." : lang === "es" ? "Activo en gastronomía desde 1996. Sé cómo funciona un negocio por dentro." : "Active in gastronomy since 1996. I know how a business works from the inside." },
+              { icon: "💼", title: lang === "de" ? "Selbst Unternehmer gewesen" : lang === "fr" ? "Ancien entrepreneur" : lang === "it" ? "Ex imprenditore" : lang === "es" ? "Fui dueño de mis propios negocios" : "Former business owner",
+                desc: lang === "de" ? "Catering, Bars, Imbiss, Diskothek — ich habe alle Fehler gemacht und daraus gelernt." : lang === "fr" ? "Catering, bars, Imbiss, discothèque — j'ai fait toutes les erreurs et j'en ai appris." : lang === "it" ? "Catering, bar, Imbiss, discoteca — ho commesso tutti gli errori e ne ho imparato." : lang === "es" ? "Catering, bares, Imbiss, discoteca — cometí todos los errores y aprendí de ellos." : "Catering, bars, Imbiss, nightclub — I made all the mistakes and learnt from them." },
+              { icon: "🤖", title: lang === "de" ? "KI-Experte für den HORECA-Sektor" : lang === "fr" ? "Expert IA pour le secteur HORECA" : lang === "it" ? "Esperto IA per il settore HORECA" : lang === "es" ? "Experto en IA para el sector HORECA" : "AI expert for the HORECA sector",
+                desc: lang === "de" ? "Spezialisiert auf KI-Anwendungen, die speziell für Gastronomie-Betriebe entwickelt wurden." : lang === "fr" ? "Spécialisé dans les applications IA développées spécifiquement pour les établissements HoReCa." : lang === "it" ? "Specializzato in applicazioni IA sviluppate specificamente per la ristorazione." : lang === "es" ? "Especializado en aplicaciones de IA diseñadas específicamente para el sector gastronómico." : "Specialised in AI applications designed specifically for gastronomy businesses." },
+              { icon: "🇩🇪", title: lang === "de" ? "41 Jahre Deutschland — zweisprachig" : lang === "fr" ? "41 ans en Allemagne — bilingue" : lang === "it" ? "41 anni in Germania — bilingue" : lang === "es" ? "41 años en Alemania — bilingüe" : "41 years in Germany — bilingual",
+                desc: lang === "de" ? "Zertifizierungen auf Deutsch und Spanisch. Ich verstehe den Schweizer und deutschen Markt." : lang === "fr" ? "Certifications en allemand et en espagnol. Je comprends le marché suisse et allemand." : lang === "it" ? "Certificazioni in tedesco e spagnolo. Capisce il mercato svizzero e tedesco." : lang === "es" ? "Certificaciones en alemán y español. Entiendo el mercado suizo y alemán." : "Certifications in German and Spanish. I understand the Swiss and German market." },
+              { icon: "🚀", title: lang === "de" ? "Keine Agentur — ich bin der Experte" : lang === "fr" ? "Pas une agence — je suis l'expert" : lang === "it" ? "Non un'agenzia — sono l'esperto" : lang === "es" ? "No soy agencia — soy el experto" : "Not an agency — I am the expert",
+                desc: lang === "de" ? "Sie arbeiten direkt mit mir. Keine Zwischenhändler. Volle Verantwortung und persönliches Engagement." : lang === "fr" ? "Vous travaillez directement avec moi. Pas d'intermédiaires. Pleine responsabilité et engagement personnel." : lang === "it" ? "Lavora direttamente con me. Nessun intermediario. Piena responsabilità e impegno personale." : lang === "es" ? "Trabajas directamente conmigo. Sin intermediarios. Plena responsabilidad y compromiso personal." : "You work directly with me. No middlemen. Full responsibility and personal commitment." },
+              { icon: "📈", title: lang === "de" ? "WIN-WIN: Erst sparen, dann verdienen" : lang === "fr" ? "WIN-WIN: D'abord économiser, puis gagner" : lang === "it" ? "WIN-WIN: Prima risparmiare, poi guadagnare" : lang === "es" ? "WIN-WIN: Primero ahorrar, luego ganar" : "WIN-WIN: First save, then earn",
+                desc: lang === "de" ? "Sie zahlen aus dem Geld, das ich Ihnen spare. Wenn ich das Ziel nicht erreiche — arbeite ich kostenlos weiter." : lang === "fr" ? "Vous payez avec l'argent que je vous aide à économiser. Si je n'atteins pas l'objectif — je continue à travailler gratuitement." : lang === "it" ? "Mi paga con i soldi che la aiuto a risparmiare. Se non raggiungo l'obiettivo — continuo a lavorare gratuitamente." : lang === "es" ? "Me pagas del dinero que te ayudo a ahorrar. Si no alcanzo el objetivo — sigo trabajando gratis." : "You pay from the money I help you save. If I don't reach the target — I keep working for free." },
+            ].map((v, i) => (
+              <div key={i} className="flex items-start gap-4 p-5 rounded-xl card-premium hover:border-[#D4AF37] transition-all">
+                <span className="text-2xl shrink-0">{v.icon}</span>
+                <div>
+                  <p className="font-black text-[#D4AF37] mb-1 text-sm">{v.title}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed">{v.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA hacia el formulario */}
+          <div className="text-center p-8 rounded-2xl" style={{ background: "#1A0F00", border: "2px solid #D4AF37" }}>
+            <p className="text-2xl font-black text-white mb-2">
+              {lang === "de" ? "BEAUFTRAGEN SIE MICH JETZT" : lang === "fr" ? "ENGAGEZ-MOI MAINTENANT" : lang === "it" ? "ASSUMI I MIEI SERVIZI ORA" : lang === "es" ? "CONTRATA MIS SERVICIOS ABAJO" : "HIRE MY SERVICES BELOW"}
+            </p>
+            <p className="text-gray-300 text-sm mb-6">
+              {lang === "de" ? "Das Formular befindet sich direkt darunter — füllen Sie es aus und ich melde mich innerhalb von 24 Stunden." : lang === "fr" ? "Le formulaire se trouve juste en dessous — remplissez-le et je vous réponds dans les 24 heures." : lang === "it" ? "Il modulo si trova proprio sotto — compilatelo e mi farò vivo entro 24 ore." : lang === "es" ? "El formulario está justo abajo — complétalo y te respondo en menos de 24 horas." : "The form is right below — fill it in and I will get back to you within 24 hours."}
+            </p>
+            <button onClick={() => scrollTo("contact")} className="gold-gradient text-black font-black text-xl px-12 py-4 rounded-xl hover:opacity-90 transition-opacity pulse-gold">
+              {lang === "de" ? "⬇ ZUM FORMULAR" : lang === "fr" ? "⬇ VERS LE FORMULAIRE" : lang === "it" ? "⬇ AL MODULO" : lang === "es" ? "⬇ IR AL FORMULARIO" : "⬇ GO TO FORM"}
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" className="py-20 px-4" style={{ background: "#0D0D0D" }}>
         <div className="max-w-2xl mx-auto">
