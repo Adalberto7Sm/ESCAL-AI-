@@ -1,0 +1,130 @@
+{
+  "nav": { "diagnose": "Diagnosi", "solution": "Soluzione", "guarantee": "Garanzia", "contact": "Contatto" },
+  "hero": {
+    "badge": "Solo 33 posti rimasti nel 2026",
+    "headline1": "Quanto denaro sta perdendo",
+    "headline2": "il tuo ristorante",
+    "headline3": "ogni giorno?",
+    "sub": "In 60 minuti ti mostro esattamente dove va il denaro — e come recuperarlo.",
+    "cta_primary": "DIAGNOSI GRATUITA — 60 MIN",
+    "cta_secondary": "Vedi tutti i piani",
+    "trust": "30 anni in gastronomia · 41 anni in Germania · Non un'agenzia — sono l'esperto"
+  },
+  "pain": {
+    "title": "Ti riconosci?",
+    "items": [
+      "Il fatturato è fermo da mesi o anni",
+      "Lavori 70+ ore a settimana e i risultati non cambiano",
+      "Nessuna presenza digitale — la concorrenza ti ruba i clienti",
+      "I costi aumentano, i profitti calano — non sai perché",
+      "Nessun tempo per innovare, fare marketing o crescere"
+    ],
+    "conclusion": "Il problema non è il mercato. Il problema è l'assenza di sistema."
+  },
+  "quiz": {
+    "title": "Diagnosi Rapida",
+    "subtitle": "7 domande · 3 minuti · Risultato immediato",
+    "questions": [
+      { "q": "Puoi spiegare in una frase cosa rende unica la tua attività?", "a": ["Sì, chiaramente", "Più o meno", "No"] },
+      { "q": "La tua attività genera profitti reali ogni mese?", "a": ["Sì", "A volte", "No"] },
+      { "q": "Potresti assentarti una settimana senza che tutto si fermi?", "a": ["Sì", "Con difficoltà", "No"] },
+      { "q": "Hai un sistema di marketing digitale attivo?", "a": ["Sì", "Parzialmente", "No"] },
+      { "q": "Organizzi regolarmente eventi o promozioni speciali?", "a": ["Spesso", "Raramente", "Mai"] },
+      { "q": "Il tuo marchio è registrato legalmente?", "a": ["Sì", "In corso", "No"] },
+      { "q": "Hai un piano di crescita chiaro per i prossimi 12 mesi?", "a": ["Sì", "Parzialmente", "No"] }
+    ],
+    "result_high": "Ben posizionato — ma esistono importanti opportunità di crescita",
+    "result_mid": "La tua attività è ferma — un sistema può cambiarlo",
+    "result_low": "ALLARME: La tua attività perde denaro ogni giorno — azione urgente necessaria",
+    "loss_text": "Perdita mensile stimata",
+    "cta": "PRENOTA UNA CONSULENZA GRATUITA"
+  },
+  "solution": {
+    "badge": "Il Sistema",
+    "title": "#MYGASTROIA#",
+    "subtitle": "LA TUA IA — NELLA TUA ATTIVITÀ",
+    "tagline": "TRASFORMAZIONE DIGITALE IN 365 GIORNI",
+    "mission": "Prima ti aiuto a risparmiare. Poi ti aiuto a guadagnare di più. Mi paghi con i soldi che ti aiuto a recuperare. WIN-WIN — vinciamo tutti.",
+    "steps": [
+      { "n": "01", "title": "FERMARE LE PERDITE", "desc": "Analizziamo dove il denaro scompare ogni giorno e lo fermiamo." },
+      { "n": "02", "title": "RECUPERARE IL DENARO", "desc": "Ridurre i costi inutili. Ottimizzare le risorse." },
+      { "n": "03", "title": "CONSERVARE I RISPARMI", "desc": "Sistema di controllo finanziario attivo tutto l'anno." },
+      { "n": "04", "title": "GUADAGNARE DI PIÙ", "desc": "Nuovi concetti, eventi, strumenti IA, nuove fonti di reddito." },
+      { "n": "05", "title": "CRESCITA 365 GIORNI", "desc": "Accompagnamento continuo. Aggiornamento. Ottimizzazione permanente." }
+    ]
+  },
+  "plans": {
+    "title": "Gli 8 Livelli",
+    "subtitle": "Dal gratuito all'esclusivo — il giusto punto di ingresso per ogni attività",
+    "per_month": "/mese",
+    "contract": "Contratto minimo 12 mesi",
+    "includes": "Incluso in TUTTI i piani",
+    "included_items": ["Banca Pubblicitaria 365 giorni", "Manutenzione e Aggiornamenti", "Supporto tecnico in tempo reale", "Garanzia di crescita 9 mesi"],
+    "popular": "Più scelto",
+    "exclusive": "Esclusivo Basilea",
+    "list": [
+      { "n": "0", "name": "DIAGNOSI GRATUITA", "price": "0 €", "desc": "60 min · Senza impegno · Risultato immediato", "type": "free" },
+      { "n": "1", "name": "CONSULENZA PRIVATA", "price": "999 €", "desc": "30–40 min · Analisi completa · Piano d'azione + Regali del valore di 2.000 €", "type": "once" },
+      { "n": "2", "name": "STARTER", "price": "1.299 €", "desc": "Diagnosi IA · Banca pub · SEO locale · Social media base · Supporto", "type": "monthly" },
+      { "n": "3", "name": "GROWTH", "price": "1.999 €", "desc": "Marketing IA quotidiano · 50+ eventi · Accademia · Email marketing · SEO Pro", "type": "monthly" },
+      { "n": "4", "name": "PREMIUM", "price": "2.999 €", "desc": "Tutto Growth + Coaching · Marchio · App · WhatsApp Bot 24/7 · Ecosistema digitale completo", "type": "monthly", "popular": true },
+      { "n": "5", "name": "ELITE", "price": "7.777 €", "desc": "Il mio stipendio mensile · Lavoro dedicato a tempo pieno · Franchising · Marchio registrato", "type": "monthly" },
+      { "n": "6", "name": "DIRETTORE IBRIDO", "price": "CHF 11.000", "desc": "18 mesi · 8 aree di competenza · Risparmio CHF 276.000/anno · Alloggio incluso", "type": "monthly", "exclusive": true },
+      { "n": "7", "name": "GASTRO-IMMO", "price": "Su richiesta", "desc": "Sistema completo · Trasformazione + Scalabilità + Vendita · 1 posto disponibile", "type": "special" }
+    ]
+  },
+  "compare": {
+    "title": "1 Persona vs. 5 Specialisti",
+    "subtitle": "La decisione matematica",
+    "col_a": "5 specialisti (Basilea)",
+    "col_b": "#MYGASTROIA#",
+    "rows": [
+      ["Consulente Chef / Manager", "CHF 6.500", "✓"],
+      ["Amministratore / Controller", "CHF 5.500", "✓"],
+      ["IT / Sistemi", "CHF 8.000", "✓"],
+      ["Marketing Digitale", "CHF 5.000", "✓"],
+      ["Sviluppatore Software", "CHF 9.000", "✓"]
+    ],
+    "total_a": "CHF 34.000 / mese",
+    "total_b": "CHF 11.000 / mese",
+    "saving": "Risparmi CHF 276.000 all'anno"
+  },
+  "guarantee": {
+    "title": "La Garanzia",
+    "subtitle": "Che nessun altro a Basilea offre",
+    "items": [
+      "Certificato di Garanzia di Crescita in meno di 9 mesi",
+      "3 mesi di implementazione + 6 mesi di crescita reale",
+      "Se non raggiungo l'obiettivo — lavoro GRATIS per i mesi rimanenti",
+      "Se il contratto termina senza crescita — continuo a lavorare GRATIS",
+      "Nessuna agenzia in Europa dà questa garanzia. Io sì."
+    ],
+    "badge": "CERTIFICATO DI GARANZIA DI CRESCITA"
+  },
+  "cases": {
+    "title": "Riconosci la tua attività?",
+    "list": [
+      { "type": "Ristorante Tradizionale", "problem": "Stagnazione 3 anni · Nessuna presenza digitale", "result": "Mese 6: +40% fatturato · –25% costi · Nuova clientela 25–45 anni" },
+      { "type": "Bar / Caffè", "problem": "Forte concorrenza · Clienti che non tornano", "result": "Mese 6: +50% clienti abituali · Eventi al 100% di occupazione" },
+      { "type": "Hotel-Ristorante", "problem": "Solo il 20% degli ospiti usa il ristorante", "result": "Mese 6: Redditizio · 60% ospiti hotel · 40% clienti esterni" },
+      { "type": "Azienda Familiare", "problem": "Proprietari 80h/settimana · Nessun sistema", "result": "Mese 6: 25 ore/settimana recuperate · +35% fatturato" }
+    ]
+  },
+  "contact": {
+    "title": "Inizia ora",
+    "subtitle": "Diagnosi gratuita di 60 minuti — senza impegno",
+    "name": "Il tuo nome",
+    "business": "Nome dell'attività",
+    "city": "Città (Basilea / dintorni)",
+    "phone": "WhatsApp",
+    "plan": "Quale piano ti interessa?",
+    "message": "Il tuo problema più grande oggi nell'attività",
+    "submit": "RICHIEDERE DIAGNOSI",
+    "or": "Oppure contattami direttamente",
+    "whatsapp": "Scrivi su WhatsApp",
+    "slots": "Rimangono {n} posti nel 2026",
+    "success": "Grazie! Ti contatto entro 24 ore.",
+    "plans_select": ["Diagnosi Gratuita", "Consulenza Privata 999€", "Starter 1.299€/mese", "Growth 1.999€/mese", "Premium 2.999€/mese", "Elite 7.777€/mese", "Direttore Ibrido CHF 11.000", "GASTRO-IMMO"]
+  },
+  "footer": { "tagline": "Trasformazione Digitale in 365 Giorni", "rights": "Tutti i diritti riservati" }
+}
