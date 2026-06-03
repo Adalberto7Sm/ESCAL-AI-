@@ -115,7 +115,7 @@ export default function Home() {
           <div className="text-lg font-bold gold-text shrink-0">#MYGASTROIA#</div>
 
           <div className="hidden md:flex items-center gap-5">
-            {(["diagnose","solution","guarantee","contact"] as const).map(k => (
+            {(["diagnose","solution","guarantee"] as const).map(k => (
               <button key={k} onClick={() => scrollTo(k)} className="text-sm text-gray-300 hover:text-[#D4AF37] transition-colors">{t.nav[k]}</button>
             ))}
             <button onClick={() => scrollTo("services")} className="text-sm text-gray-300 hover:text-[#D4AF37] transition-colors">
@@ -124,6 +124,7 @@ export default function Home() {
             <button onClick={() => scrollTo("learning")} className="text-sm text-[#D4AF37] font-bold hover:text-[#FFD700] transition-colors">
               {lang === "de" ? "Lernen" : lang === "fr" ? "Formation" : lang === "it" ? "Formazione" : lang === "es" ? "Aprendizaje" : "Learning"}
             </button>
+            <button onClick={() => scrollTo("contact")} className="text-sm text-gray-300 hover:text-[#D4AF37] transition-colors">{t.nav.contact}</button>
           </div>
 
           <div className="flex items-center gap-1 flex-wrap justify-end">
@@ -138,7 +139,7 @@ export default function Home() {
         </div>
         {navOpen && (
           <div className="md:hidden border-t border-[#D4AF37]/20 px-4 py-4 flex flex-col gap-4" style={{ background: "rgba(13,13,13,0.98)" }}>
-            {(["diagnose","solution","guarantee","contact"] as const).map(k => (
+            {(["diagnose","solution","guarantee"] as const).map(k => (
               <button key={k} onClick={() => scrollTo(k)} className="text-left text-gray-300 hover:text-[#D4AF37]">{t.nav[k]}</button>
             ))}
             <button onClick={() => scrollTo("services")} className="text-left text-gray-300 hover:text-[#D4AF37]">
@@ -147,6 +148,7 @@ export default function Home() {
             <button onClick={() => scrollTo("learning")} className="text-left text-[#D4AF37] font-bold">
               {lang === "de" ? "Lernen" : lang === "fr" ? "Formation" : lang === "it" ? "Formazione" : lang === "es" ? "Aprendizaje" : "Learning"}
             </button>
+            <button onClick={() => scrollTo("contact")} className="text-left text-gray-300 hover:text-[#D4AF37]">{t.nav.contact}</button>
           </div>
         )}
       </nav>
