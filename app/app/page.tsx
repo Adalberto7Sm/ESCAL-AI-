@@ -808,16 +808,62 @@ export default function Home() {
               </div>
             </div>
             <div className="text-gray-200 text-sm leading-relaxed space-y-4">
-              <p>Soy un profesional multidisciplinario con certificaciones avanzadas (en español y en alemán) en Marketing, Tráfico Web, SEO Local, Gestión de Redes Sociales, Copywriting, redacción de ofertas, cartas de ventas y presentaciones vendedoras.</p>
-              <p>Soy desarrollador y diseñador web/gráfico, optimizador y posicionador SEO, redactor de contenido para plataformas digitales y experto en Consultoría Gastronómica y Asesoría en Inteligencia Artificial.</p>
-              <p>Estoy especializado en el desarrollo de aplicaciones con IA diseñadas específicamente para optimizar la rentabilidad del sector HORECA. Vivo en Alemania desde 1984 y me mantengo activo en la gastronomía desde 1996. Además, soy organizador de eventos afro-latinoamericanos desde 1997.</p>
-              <p className="text-[#D4AF37] font-black">FUI GERENTE Y DUEÑO DE MIS PROPIOS NEGOCIOS: CATERING, DELIVERY, BARES, IMBISS Y UNA DISCOTECA. ¡SÉ LO QUE ES SER UN DUEÑO DE NEGOCIO!</p>
-              <p>Gané dinero, perdí dinero, cometí errores y logré grandes aciertos. Entendí que debía dominar el marketing, la inteligencia artificial y las nuevas tecnologías para no depender de nadie. Lo aprendí, lo apliqué y hoy soy consultor porque poseo lo que a la mayoría de los dueños de negocios les falta.</p>
-              <p>Soy consultor gastronómico y asesor de IA: sé cómo ayudarte. Mi misión es fusionar la hospitalidad tradicional con la vanguardia tecnológica para transformar establecimientos estancados en negocios de alto rendimiento.</p>
-              <div className="mt-4 p-4 rounded-xl" style={{ background: "#1A0F00" }}>
-                <p className="text-[#D4AF37] font-black">PRIMERO TE AYUDO A ECONOMIZAR Y DESPUÉS TE AYUDO A GANAR MÁS DINERO TODOS LOS DÍAS. ESA ES MI META.</p>
-                <p className="text-gray-300 text-sm mt-2">📱 WhatsApp directo: <span className="text-[#D4AF37] font-bold">+4915111115353</span></p>
-              </div>
+              {lang === "de" ? (<>
+                <p>Ich bin ein multidisziplinärer Fachmann mit fortgeschrittenen Zertifizierungen (auf Spanisch und Deutsch) in Marketing, Web-Traffic, Local SEO, Social-Media-Management, Copywriting, Angebotserstellung, Verkaufsbriefe und überzeugende Präsentationen.</p>
+                <p>Ich bin Web- und Grafikentwickler und -designer, SEO-Optimierer und -Positionierer, Inhaltsredakteur für digitale Plattformen sowie Experte für Gastronomieberatung und Beratung in künstlicher Intelligenz.</p>
+                <p>Ich bin spezialisiert auf die Entwicklung von KI-Anwendungen, die speziell zur Optimierung der Rentabilität des HORECA-Sektors entwickelt wurden. Ich lebe seit 1984 in Deutschland und bin seit 1996 in der Gastronomie aktiv. Außerdem bin ich seit 1997 Organisator afro-lateinamerikanischer Veranstaltungen.</p>
+                <p className="text-[#D4AF37] font-black">ICH WAR GESCHÄFTSFÜHRER UND INHABER MEINER EIGENEN BETRIEBE: CATERING, DELIVERY, BARS, IMBISS UND EINE DISKOTHEK. ICH WEISS, WAS ES HEISST, UNTERNEHMER ZU SEIN!</p>
+                <p>Ich habe Geld verdient, Geld verloren, Fehler gemacht und große Erfolge erzielt. Ich habe verstanden, dass ich Marketing, künstliche Intelligenz und neue Technologien beherrschen muss, um von niemandem abhängig zu sein. Ich habe es gelernt, angewendet – und bin heute Berater, weil ich besitze, was den meisten Unternehmern fehlt.</p>
+                <p>Ich bin Gastronomieberater und KI-Experte: Ich weiß, wie ich Ihnen helfen kann. Meine Mission ist es, traditionelle Gastfreundschaft mit technologischer Avantgarde zu verbinden, um stagnierende Betriebe in hochrentable Unternehmen zu verwandeln.</p>
+                <div className="mt-4 p-4 rounded-xl" style={{ background: "#1A0F00" }}>
+                  <p className="text-[#D4AF37] font-black">ZUERST HELFE ICH IHNEN ZU SPAREN — DANN HELFE ICH IHNEN, JEDEN TAG MEHR ZU VERDIENEN. DAS IST MEIN ZIEL.</p>
+                  <p className="text-gray-300 text-sm mt-2">📱 WhatsApp direkt: <span className="text-[#D4AF37] font-bold">+4915111115353</span></p>
+                </div>
+              </>) : lang === "fr" ? (<>
+                <p>Je suis un professionnel multidisciplinaire avec des certifications avancées (en espagnol et en allemand) en Marketing, Trafic Web, SEO Local, Gestion des Réseaux Sociaux, Copywriting, rédaction d'offres, lettres de vente et présentations convaincantes.</p>
+                <p>Je suis développeur et designer web/graphique, optimiseur et positionneur SEO, rédacteur de contenu pour plateformes digitales et expert en Conseil Gastronomique et Conseil en Intelligence Artificielle.</p>
+                <p>Je suis spécialisé dans le développement d'applications IA conçues spécifiquement pour optimiser la rentabilité du secteur HORECA. Je vis en Allemagne depuis 1984 et je suis actif dans la gastronomie depuis 1996. De plus, je suis organisateur d'événements afro-latino-américains depuis 1997.</p>
+                <p className="text-[#D4AF37] font-black">J'AI ÉTÉ GÉRANT ET PROPRIÉTAIRE DE MES PROPRES ÉTABLISSEMENTS : CATERING, DELIVERY, BARS, IMBISS ET UNE DISCOTHÈQUE. JE SAIS CE QUE C'EST QU'ÊTRE CHEF D'ENTREPRISE !</p>
+                <p>J'ai gagné de l'argent, j'en ai perdu, j'ai commis des erreurs et j'ai obtenu de grands succès. J'ai compris que je devais maîtriser le marketing, l'intelligence artificielle et les nouvelles technologies pour ne dépendre de personne. Je l'ai appris, je l'ai appliqué et aujourd'hui je suis consultant parce que je possède ce qui manque à la plupart des chefs d'entreprise.</p>
+                <p>Je suis consultant gastronomique et conseiller IA : je sais comment vous aider. Ma mission est de fusionner l'hospitalité traditionnelle avec l'avant-garde technologique pour transformer des établissements stagnants en entreprises à haute performance.</p>
+                <div className="mt-4 p-4 rounded-xl" style={{ background: "#1A0F00" }}>
+                  <p className="text-[#D4AF37] font-black">D'ABORD JE VOUS AIDE À ÉCONOMISER — PUIS JE VOUS AIDE À GAGNER PLUS D'ARGENT CHAQUE JOUR. C'EST MON OBJECTIF.</p>
+                  <p className="text-gray-300 text-sm mt-2">📱 WhatsApp direct : <span className="text-[#D4AF37] font-bold">+4915111115353</span></p>
+                </div>
+              </>) : lang === "it" ? (<>
+                <p>Sono un professionista multidisciplinare con certificazioni avanzate (in spagnolo e in tedesco) in Marketing, Traffico Web, SEO Locale, Gestione dei Social Media, Copywriting, redazione di offerte, lettere di vendita e presentazioni convincenti.</p>
+                <p>Sono sviluppatore e designer web/grafico, ottimizzatore e posizionatore SEO, redattore di contenuti per piattaforme digitali ed esperto in Consulenza Gastronomica e Consulenza in Intelligenza Artificiale.</p>
+                <p>Sono specializzato nello sviluppo di applicazioni IA progettate specificamente per ottimizzare la redditività del settore HORECA. Vivo in Germania dal 1984 e sono attivo nella gastronomia dal 1996. Inoltre, sono organizzatore di eventi afro-latinoamericani dal 1997.</p>
+                <p className="text-[#D4AF37] font-black">SONO STATO MANAGER E PROPRIETARIO DEI MIEI LOCALI: CATERING, DELIVERY, BAR, IMBISS E UNA DISCOTECA. SO COSA SIGNIFICA ESSERE UN IMPRENDITORE!</p>
+                <p>Ho guadagnato denaro, ho perso denaro, ho commesso errori e ottenuto grandi successi. Ho capito che dovevo padroneggiare il marketing, l'intelligenza artificiale e le nuove tecnologie per non dipendere da nessuno. L'ho imparato, l'ho applicato e oggi sono consulente perché posseggo ciò che manca alla maggior parte degli imprenditori.</p>
+                <p>Sono consulente gastronomico e consulente IA: so come aiutarti. La mia missione è fondere l'ospitalità tradizionale con l'avanguardia tecnologica per trasformare esercizi stagnanti in attività ad alto rendimento.</p>
+                <div className="mt-4 p-4 rounded-xl" style={{ background: "#1A0F00" }}>
+                  <p className="text-[#D4AF37] font-black">PRIMA TI AIUTO A RISPARMIARE — POI TI AIUTO A GUADAGNARE DI PIÙ OGNI GIORNO. QUESTO È IL MIO OBIETTIVO.</p>
+                  <p className="text-gray-300 text-sm mt-2">📱 WhatsApp diretto: <span className="text-[#D4AF37] font-bold">+4915111115353</span></p>
+                </div>
+              </>) : lang === "en" ? (<>
+                <p>I am a multidisciplinary professional with advanced certifications (in Spanish and German) in Marketing, Web Traffic, Local SEO, Social Media Management, Copywriting, offer writing, sales letters and persuasive presentations.</p>
+                <p>I am a web and graphic developer and designer, SEO optimiser and positioning specialist, content writer for digital platforms, and expert in Gastronomic Consulting and Artificial Intelligence Advisory.</p>
+                <p>I specialise in developing AI applications designed specifically to optimise the profitability of the HORECA sector. I have lived in Germany since 1984 and have been active in gastronomy since 1996. I have also been organising Afro-Latin American events since 1997.</p>
+                <p className="text-[#D4AF37] font-black">I WAS MANAGER AND OWNER OF MY OWN BUSINESSES: CATERING, DELIVERY, BARS, IMBISS AND A NIGHTCLUB. I KNOW WHAT IT MEANS TO BE A BUSINESS OWNER!</p>
+                <p>I made money, I lost money, I made mistakes and I achieved great successes. I understood that I had to master marketing, artificial intelligence and new technologies to depend on no one. I learnt it, I applied it — and today I am a consultant because I possess what most business owners lack.</p>
+                <p>I am a gastronomic consultant and AI advisor: I know how to help you. My mission is to merge traditional hospitality with technological avant-garde to transform stagnant establishments into high-performance businesses.</p>
+                <div className="mt-4 p-4 rounded-xl" style={{ background: "#1A0F00" }}>
+                  <p className="text-[#D4AF37] font-black">FIRST I HELP YOU SAVE MONEY — THEN I HELP YOU EARN MORE EVERY DAY. THAT IS MY GOAL.</p>
+                  <p className="text-gray-300 text-sm mt-2">📱 WhatsApp direct: <span className="text-[#D4AF37] font-bold">+4915111115353</span></p>
+                </div>
+              </>) : (<>
+                <p>Soy un profesional multidisciplinario con certificaciones avanzadas (en español y en alemán) en Marketing, Tráfico Web, SEO Local, Gestión de Redes Sociales, Copywriting, redacción de ofertas, cartas de ventas y presentaciones vendedoras.</p>
+                <p>Soy desarrollador y diseñador web/gráfico, optimizador y posicionador SEO, redactor de contenido para plataformas digitales y experto en Consultoría Gastronómica y Asesoría en Inteligencia Artificial.</p>
+                <p>Estoy especializado en el desarrollo de aplicaciones con IA diseñadas específicamente para optimizar la rentabilidad del sector HORECA. Vivo en Alemania desde 1984 y me mantengo activo en la gastronomía desde 1996. Además, soy organizador de eventos afro-latinoamericanos desde 1997.</p>
+                <p className="text-[#D4AF37] font-black">FUI GERENTE Y DUEÑO DE MIS PROPIOS NEGOCIOS: CATERING, DELIVERY, BARES, IMBISS Y UNA DISCOTECA. ¡SÉ LO QUE ES SER UN DUEÑO DE NEGOCIO!</p>
+                <p>Gané dinero, perdí dinero, cometí errores y logré grandes aciertos. Entendí que debía dominar el marketing, la inteligencia artificial y las nuevas tecnologías para no depender de nadie. Lo aprendí, lo apliqué y hoy soy consultor porque poseo lo que a la mayoría de los dueños de negocios les falta.</p>
+                <p>Soy consultor gastronómico y asesor de IA: sé cómo ayudarte. Mi misión es fusionar la hospitalidad tradicional con la vanguardia tecnológica para transformar establecimientos estancados en negocios de alto rendimiento.</p>
+                <div className="mt-4 p-4 rounded-xl" style={{ background: "#1A0F00" }}>
+                  <p className="text-[#D4AF37] font-black">PRIMERO TE AYUDO A ECONOMIZAR Y DESPUÉS TE AYUDO A GANAR MÁS DINERO TODOS LOS DÍAS. ESA ES MI META.</p>
+                  <p className="text-gray-300 text-sm mt-2">📱 WhatsApp directo: <span className="text-[#D4AF37] font-bold">+4915111115353</span></p>
+                </div>
+              </>)}
             </div>
           </div>
 
