@@ -118,6 +118,12 @@ export default function Home() {
             {(["diagnose","solution","guarantee","contact"] as const).map(k => (
               <button key={k} onClick={() => scrollTo(k)} className="text-sm text-gray-300 hover:text-[#D4AF37] transition-colors">{t.nav[k]}</button>
             ))}
+            <button onClick={() => scrollTo("services")} className="text-sm text-gray-300 hover:text-[#D4AF37] transition-colors">
+              {lang === "de" ? "Leistungen" : lang === "fr" ? "Services" : lang === "it" ? "Servizi" : lang === "es" ? "Servicios" : "Services"}
+            </button>
+            <button onClick={() => scrollTo("learning")} className="text-sm text-[#D4AF37] font-bold hover:text-[#FFD700] transition-colors">
+              {lang === "de" ? "Lernen" : lang === "fr" ? "Formation" : lang === "it" ? "Formazione" : lang === "es" ? "Aprendizaje" : "Learning"}
+            </button>
           </div>
 
           <div className="flex items-center gap-1 flex-wrap justify-end">
@@ -135,6 +141,12 @@ export default function Home() {
             {(["diagnose","solution","guarantee","contact"] as const).map(k => (
               <button key={k} onClick={() => scrollTo(k)} className="text-left text-gray-300 hover:text-[#D4AF37]">{t.nav[k]}</button>
             ))}
+            <button onClick={() => scrollTo("services")} className="text-left text-gray-300 hover:text-[#D4AF37]">
+              {lang === "de" ? "Leistungen" : lang === "fr" ? "Services" : lang === "it" ? "Servizi" : lang === "es" ? "Servicios" : "Services"}
+            </button>
+            <button onClick={() => scrollTo("learning")} className="text-left text-[#D4AF37] font-bold">
+              {lang === "de" ? "Lernen" : lang === "fr" ? "Formation" : lang === "it" ? "Formazione" : lang === "es" ? "Aprendizaje" : "Learning"}
+            </button>
           </div>
         )}
       </nav>
@@ -382,7 +394,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 px-4" style={{ background: "#0D0D0D" }}>
+      <section id="services" className="py-20 px-4" style={{ background: "#0D0D0D" }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black gold-text mb-3">
@@ -452,7 +464,7 @@ export default function Home() {
       </section>
 
       {/* LEARNING SECTION */}
-      <section className="py-20 px-4" style={{ background: "#111" }}>
+      <section id="learning" className="py-20 px-4" style={{ background: "#111" }}>
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block px-4 py-1 text-sm font-bold text-[#D4AF37] border border-[#D4AF37]/40 rounded-full mb-6">
             {lang === "de" ? "Bildung & Wachstum" : lang === "fr" ? "Formation & Croissance" : lang === "it" ? "Formazione & Crescita" : lang === "es" ? "Formación & Crecimiento" : "Education & Growth"}
